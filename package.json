@@ -1,9 +1,9 @@
 {
-    "name": "nqchighlighter",
-    "displayName": "NQC Highlighter",
-    "description": "NQC Programming Language Highlighter",
+    "name": "nxchighlighter",
+    "displayName": "NXC Highlighter",
+    "description": "NXC Language Syntax Highlighter, fork of NQX Highlighter by BirdHouseWorks",
     "publisher": "BirdHouseWorks",
-    "repository":"https://github.com/nowaythatsok/nqc_vscode_extension",
+    "repository":"https://github.com/hwschieding/nxc_vscode_extension",
     "version": "0.0.1",
     "icon":"images/rcx_128.jpg",
     "engines": {
@@ -17,21 +17,21 @@
             {
                 "id": "nqc",
                 "aliases": [
-                    "Not Quite C",
-                    "nqc"
+                    "Not Exactly C",
+                    "nxc"
                 ],
                 "extensions": [
-                    ".nqc",
-                    ".NQC"
+                    ".nxc",
+                    ".NXC"
                 ],
                 "configuration": "./language-configuration.json"
             }
         ],
         "grammars": [
             {
-                "language": "nqc",
-                "scopeName": "source.nqc",
-                "path": "./syntaxes/nqc.tmLanguage.json"
+                "language": "nxc",
+                "scopeName": "source.nxc",
+                "path": "./syntaxes/nxc.tmLanguage.json"
             }
         ]
     }
