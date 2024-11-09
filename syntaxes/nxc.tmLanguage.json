@@ -24,6 +24,9 @@
 			"include": "#functions"
 		},
 		{
+			"include": "#variables"
+		},
+		{
 			"include": "#constants"
 		}
 		
@@ -39,6 +42,14 @@
 				{
 					"match":"##",
 					"name":"markup.italic.nxc"
+				}
+			]
+		},
+		"variables":{
+			"patterns": [
+				{
+					"name": "variable.parameter.nxc",
+					"match": "&?[a-zA-Z_][0-9a-zA-Z_]*\\b"
 				}
 			]
 		},
@@ -69,10 +80,17 @@
 			]
 		},
 		"strings": {
-			"name": "string.quoted.double.nxc",
-			"begin": "\"",
-			"end": "\"",
 			"patterns": [
+				{
+					"name": "string.quoted.double.nxc",
+					"begin": "\"",
+					"end": "\""
+				},
+				{
+					"name": "string.quoted.single.nxc",
+					"begin": "'",
+					"end": "'"
+				},
 				{
 					"name": "constant.character.escape.nxc",
 					"match": "\\\\."
@@ -111,7 +129,7 @@
 					"name": "keyword.operator.logical.nxc"
 				},
 				{
-					"match": "&|\\||\\^|~",
+					"match": "&\\s|\\||\\^|~",
 					"name": "keyword.operator.nxc"
 				},
 				{
@@ -142,17 +160,16 @@
 		"keywords": {
 			"patterns": [
 				{    
-
 					"name": "keyword.control.nxc",
 					"match": "\\b(if|else|goto|repeat|switch|case|default|do|while|until|for|break|continue|catch|return|start|stop|catch)\\b"
 				},
 				{
 					"name": "storage.modifier.nxc",
-					"match": "\\b(const|inline)\\b"
+					"match": "\\b(const|inline|safecall|static|typedef)\\b"
 				},
 				{
 					"name": "storage.type.nxc",
-					"match": "\\b(void|int|int\\*|int&)\\b"
+					"match": "\\b(void|bool|byte|char|int|int\\*|int&|short|long|unsigned|float|mutex|string|enum|struct|sub)\\b"
 				},
 				{
 					"name": "constant.language.nxc",
@@ -160,7 +177,7 @@
 				},
 				{
 					"name": "support.type.nxc",
-					"match": "\\b(sub|task)\\b"
+					"match": "\\b(task)\\b"
 				},
 				{
 					"name": "keyword.control.resources.nxc",
@@ -204,11 +221,11 @@
 		"constants":{
 			"patterns": [
 				{
-					"match": "\\b[0-9]+\\b",
+					"match": "\\b[0-9\\.]+\\b",
 					"name": "constant.numeric.nxc"
 				},
 				{
-					"match": "\\b0x?([a-f0-9]{6}|[a-f0-9]{3})$\\b",
+					"match": "\\b0x?([a-f0-9]{1,6}?)$\\b",
 					"name": "constant.numeric.nxc"
 				}
 			]
