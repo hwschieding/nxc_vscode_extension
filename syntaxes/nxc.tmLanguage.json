@@ -22,6 +22,9 @@
 		},
 		{
 			"include": "#functions"
+		},
+		{
+			"include": "#constants"
 		}
 		
 		
@@ -30,8 +33,12 @@
 		"preprocessor":{
 			"patterns": [
 				{
-					"match":"\\s*#(define|include|if|ifdef|ifndef|else|elif|endif)\\b",
-					"name":"keyword.nqc"
+					"match":"\\s*#(inlcude|define|ifdef|ifndef|endif|if|elif|undef|line|error|pragma|import|download)\\b",
+					"name":"keyword.nxc"
+				},
+				{
+					"match":"##",
+					"name":"markup.italic.nxc"
 				}
 			]
 		},
@@ -40,34 +47,34 @@
 				{
 					"begin": "//",
 					"end": "\n",
-					"name":"comment.line.double-slash.nqc",
+					"name":"comment.line.double-slash.nxc",
 					"patterns": [
 						{
 							"match":"(TODO:|FIXME:)",
-							"name":"keyword.nqc"
+							"name":"keyword.nxc"
 						}
 					]
 				},
 				{
 					"begin": "/\\*",
 					"end": "\\*/",
-					"name":"comment.block.nqc",
+					"name":"comment.block.nxc",
 					"patterns": [
 						{
 							"match":"(TODO:|FIXME:)",
-							"name":"keyword.nqc"
+							"name":"keyword.nxc"
 						}
 					]
 				}
 			]
 		},
 		"strings": {
-			"name": "string.quoted.double.nqc",
+			"name": "string.quoted.double.nxc",
 			"begin": "\"",
 			"end": "\"",
 			"patterns": [
 				{
-					"name": "constant.character.escape.nqc",
+					"name": "constant.character.escape.nxc",
 					"match": "\\\\."
 				}
 			]
@@ -77,55 +84,55 @@
 				
 				{
 					"match": "--",
-					"name": "keyword.operator.decrement.nqc"
+					"name": "keyword.operator.decrement.nxc"
 				},
 				{
 					"match": "\\+\\+",
-					"name": "keyword.operator.increment.nqc"
+					"name": "keyword.operator.increment.nxc"
 				},
 				{
 					"match": "%=|\\+=|-=|\\*=|(?<!\\()/=",
-					"name": "keyword.operator.assignment.compound.nqc"
+					"name": "keyword.operator.assignment.compound.nxc"
 				},
 				{
 					"match": "&=|\\^=|<<=|>>=|\\|=",
-					"name": "keyword.operator.assignment.compound.bitwise.nqc"
+					"name": "keyword.operator.assignment.compound.bitwise.nxc"
 				},
 				{
 					"match": "<<|>>",
-					"name": "keyword.operator.bitwise.shift.nqc"
+					"name": "keyword.operator.bitwise.shift.nxc"
 				},
 				{
 					"match": "!=|<=|>=|==|<|>",
-					"name": "keyword.operator.comparison.nqc"
+					"name": "keyword.operator.comparison.nxc"
 				},
 				{
 					"match": "&&|!|\\|\\|",
-					"name": "keyword.operator.logical.nqc"
+					"name": "keyword.operator.logical.nxc"
 				},
 				{
 					"match": "&|\\||\\^|~",
-					"name": "keyword.operator.nqc"
+					"name": "keyword.operator.nxc"
 				},
 				{
 					"match": "=",
-					"name": "keyword.operator.assignment.nqc"
+					"name": "keyword.operator.assignment.nxc"
 				},
 				{
 					"match": "%|\\*|/|-|\\+",
-					"name": "keyword.operator.nqc"
+					"name": "keyword.operator.nxc"
 				},
 				{
 					"begin": "(\\?)",
 					"beginCaptures": {
 						"1": {
-							"name": "keyword.operator.ternary.nqc"
+							"name": "keyword.operator.ternary.nxc"
 						}
 					},
 					"end": "(:)",
 					"endCaptures": {
 						"1": {
-							"name": "keyword.operator.ternary.nqc"
+							"name": "keyword.operator.ternary.nxc"
 						}
 					}
 				}
@@ -136,44 +143,44 @@
 			"patterns": [
 				{    
 
-					"name": "keyword.control.nqc",
+					"name": "keyword.control.nxc",
 					"match": "\\b(if|else|goto|repeat|switch|case|default|do|while|until|for|break|continue|catch|return|start|stop|catch)\\b"
 				},
 				{
-					"name": "storage.modifier.nqc",
+					"name": "storage.modifier.nxc",
 					"match": "\\b(const|inline)\\b"
 				},
 				{
-					"name": "storage.type.nqc",
+					"name": "storage.type.nxc",
 					"match": "\\b(void|int|int\\*|int&)\\b"
 				},
 				{
-					"name": "constant.language.nqc",
+					"name": "constant.language.nxc",
 					"match": "\\b(NULL|true|false|TRUE|FALSE)\\b"
 				},
 				{
-					"name": "support.type.nqc",
+					"name": "support.type.nxc",
 					"match": "\\b(sub|task)\\b"
 				},
 				{
-					"name": "keyword.control.resources.nqc",
+					"name": "keyword.control.resources.nxc",
 					"match": "\\b(acquire|monitor)\\b"
 				},
 				{
-					"name": "keyword.nqc",
+					"name": "keyword.nxc",
 					"match": "\\b(__event_src|__nolist|__res|__sensor|__taskid|__type)\\b"
 				},
 				{
 					"match": "\\babs\\b",
-					"name": "keyword.operator.abs.nqc"
+					"name": "keyword.operator.abs.nxc"
 				},
 				{
 					"match": "\\bsign\\b",
-					"name": "keyword.operator.sign.nqc"
+					"name": "keyword.operator.sign.nxc"
 				},
 				{
 					"match": "\\basm\\b",
-					"name": "keyword.operator.sign.nqc"
+					"name": "keyword.operator.sign.nxc"
 				}
 
 			]
@@ -182,7 +189,7 @@
 			"patterns":[
 				{
 					"match": "\\b([A-Z_][0-9A-Z_]+)\\b",
-					"name": "constant.other.nqc"
+					"name": "constant.character.nxc"
 				}
 			]
 		},
@@ -190,10 +197,22 @@
 			"patterns":[
 				{
 					"match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)(?=\\()\\b",
-					"name": "entity.name.function.nqc"
+					"name": "entity.name.function.nxc"
+				}
+			]
+		},
+		"constants":{
+			"patterns": [
+				{
+					"match": "\\b[0-9]+\\b",
+					"name": "constant.numeric.nxc"
+				},
+				{
+					"match": "\\b0x?([a-f0-9]{6}|[a-f0-9]{3})$\\b",
+					"name": "constant.numeric.nxc"
 				}
 			]
 		}
 	},
-	"scopeName": "source.nqc"
+	"scopeName": "source.nxc"
 }
