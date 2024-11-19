@@ -48,8 +48,12 @@
 		"variables":{
 			"patterns": [
 				{
+					"name": "variable.language.nxc",
+					"match": "\\b__[a-zA-Z]*__\\b"
+				},
+				{
 					"name": "variable.parameter.nxc",
-					"match": "&?[a-zA-Z_][0-9a-zA-Z_]*\\b"
+					"match": "\\b&?[a-zA-Z_][0-9a-zA-Z_]*\\b"
 				}
 			]
 		},
@@ -109,7 +113,7 @@
 					"name": "keyword.operator.increment.nxc"
 				},
 				{
-					"match": "%=|\\+=|-=|\\*=|(?<!\\()/=",
+					"match": "%=|\\+=|-=|\\*=|(?<!\\()/=|\\|\\|=",
 					"name": "keyword.operator.assignment.compound.nxc"
 				},
 				{
@@ -117,7 +121,7 @@
 					"name": "keyword.operator.assignment.compound.bitwise.nxc"
 				},
 				{
-					"match": "<<|>>",
+					"match": "<<=|>>=",
 					"name": "keyword.operator.bitwise.shift.nxc"
 				},
 				{
@@ -130,7 +134,7 @@
 				},
 				{
 					"match": "&\\s|\\||\\^|~",
-					"name": "keyword.operator.nxc"
+					"name": "keyword.operator.logical.bitwise.nxc"
 				},
 				{
 					"match": "=",
@@ -161,7 +165,7 @@
 			"patterns": [
 				{    
 					"name": "keyword.control.nxc",
-					"match": "\\b(if|else|goto|repeat|switch|case|default|do|while|until|for|break|continue|catch|return|start|stop|catch)\\b"
+					"match": "\\b(if|else|goto|repeat|switch|case|default|do|while|until|for|break|continue|catch|return|start|stop|priority)\\b"
 				},
 				{
 					"name": "storage.modifier.nxc",
@@ -177,7 +181,7 @@
 				},
 				{
 					"name": "support.type.nxc",
-					"match": "\\b(task)\\b"
+					"match": "\\b(task|asm)\\b"
 				},
 				{
 					"name": "keyword.control.resources.nxc",
@@ -193,10 +197,6 @@
 				},
 				{
 					"match": "\\bsign\\b",
-					"name": "keyword.operator.sign.nxc"
-				},
-				{
-					"match": "\\basm\\b",
 					"name": "keyword.operator.sign.nxc"
 				}
 
