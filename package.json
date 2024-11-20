@@ -24,8 +24,30 @@
                 "command": "nxchighlighter.twoPlusTwo",
                 "title": "Two Plus Two",
                 "category": "NXC"
+            },
+            {
+                "command": "nxchighlighter.openTerminal",
+                "title": "Open Terminal",
+                "category": "NXC"
+            },
+            {
+                "command": "nxchighlighter.testCompiler",
+                "title": "Test Compiler",
+                "category": "NXC"
             }
         ],
+        "configuration": {
+            "title":"NXC",
+            "properties": {
+                "NXC.nbcCompilerPath": {
+                    "type": "string",
+                    "default":"C:\\Program Files (x86)\\BricxCC\\nbc.exe",
+                    "markdownDescription": "Filepath to the NBC compiler",
+                    "format": "uri",
+                    "scope": "machine"
+                }
+            }
+        },
         "languages": [
             {
                 "id": "nxc",
@@ -62,6 +84,12 @@
                 "language": "nqc",
                 "scopeName": "source.nqc",
                 "path": "./syntaxes/nqc.tmLanguage.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "nxc",
+                "path": "./snippets/nxc.snippets.json"
             }
         ]
     }

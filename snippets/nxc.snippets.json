@@ -1,0 +1,7 @@
+{
+    "OnFwd":{
+        "prefix": ["OnFwd"],
+        "body": ["OnFwd($0)"],
+        "description": "OnFwd"
+    }
+}
