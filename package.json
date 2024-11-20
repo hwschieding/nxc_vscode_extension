@@ -5,7 +5,7 @@
     "publisher": "hwschieding",
     "repository":"https://github.com/hwschieding/nxc_vscode_extension",
     "version": "0.0.1",
-    "icon":"images/rcx_128.jpg",
+    "icon":"images/nxc-extension-logo.jpg",
     "engines": {
         "vscode": "^1.95.0"
     },
