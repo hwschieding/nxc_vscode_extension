@@ -1,21 +1,23 @@
-const vscode = require('vscode');
+const {ExtensionContext, commands, workspace, window, Uri} = require('vscode');
 
 /**
- * @param {vscode.ExtensionContext} context
+ * @param {ExtensionContext} context
  */
+
 async function activate(context) {
+    const EXTENSION_ID = 'nxchighlighter';
     const COMPILER_PATH_SECTION = 'NXC.nbcCompilerPath';
     const TERM_NAME = "NBC Compiler";
 
     console.log("Extension Running!");
 
-    let nbcUri = await getCompilerPath(COMPILER_PATH_SECTION);
+    let nbcUri = (await getCompilerPath(COMPILER_PATH_SECTION)).uri;
 
-    const openNxcSettings = vscode.commands.registerCommand('nxchighlighter.openNxcSettings', function () {
-        vscode.commands.executeCommand('workbench.action.openSettings', COMPILER_PATH_SECTION);
+    const openNxcSettings = commands.registerCommand(`${EXTENSION_ID}.openNxcSettings`, function () {
+        commands.executeCommand('workbench.action.openSettings', COMPILER_PATH_SECTION);
     });
 
-    const onCompilerPathChange = vscode.workspace.onDidChangeConfiguration(async e => {
+    const onCompilerPathChange = workspace.onDidChangeConfiguration(async e => {
         if(e.affectsConfiguration(COMPILER_PATH_SECTION)){
             const nbcPath = await getCompilerPath(COMPILER_PATH_SECTION);
             if(nbcPath.valid){
@@ -24,23 +26,31 @@ async function activate(context) {
         }
     });
 
-    const helloWorld = vscode.commands.registerCommand('nxchighlighter.helloworld', function () {
-        vscode.window.showInformationMessage('Hello World from nxchighlighter!');
+    const helloWorld = commands.registerCommand(`${EXTENSION_ID}.helloworld`, function () {
+        window.showInformationMessage('Hello World from nxchighlighter!');
     });
 
-    const twoPlusTwo = vscode.commands.registerCommand('nxchighlighter.twoPlusTwo', function () {
-        vscode.window.showInformationMessage((2 + 2).toString());
+    const twoPlusTwo = commands.registerCommand(`${EXTENSION_ID}.twoPlusTwo`, function () {
+        window.showInformationMessage((2 + 2).toString());
     });
 
-    const openTerminal = vscode.commands.registerCommand('nxchighlighter.openTerminal', function () {
+    const compileAndDownload = commands.registerCommand(`${EXTENSION_ID}.compileAndDownload`, function () {
+        const terminal = getNBCTerminal(TERM_NAME);
+        let currentFile = window.activeTextEditor.document.fileName;
+        terminal.sendText(`'${nbcUri.fsPath}' -d '${currentFile}'`);
+        terminal.show();
+    })
+
+    const openTerminal = commands.registerCommand(`${EXTENSION_ID}.openTerminal`, function () {
         const terminal = getNBCTerminal(TERM_NAME);
         terminal.sendText("echo 'Terminal Test Message'");
         terminal.show();
     });
     
-    const testCompiler = vscode.commands.registerCommand('nxchighlighter.testCompiler', function () {
+    const testCompiler = commands.registerCommand(`${EXTENSION_ID}.testCompiler`, function () {
         const terminal = getNBCTerminal(TERM_NAME);
         terminal.sendText(`'${nbcUri.fsPath}' -help`);
+        terminal.show();
     });
 
     context.subscriptions.push(
@@ -49,35 +59,30 @@ async function activate(context) {
         twoPlusTwo, 
         openTerminal, 
         testCompiler,
+        compileAndDownload,
         openNxcSettings
     );
 }
 
-function deactivate() {}
-
 function getNBCTerminal(terminalName) {
-    const terminals = vscode.window.terminals;
+    const terminals = window.terminals;
     for(let i = 0; i < terminals.length; i++){
         if(terminals[i].name == terminalName){
             return terminals[i];
         }
     }
-    return createNBCTerminal(terminalName);
-}
-
-function createNBCTerminal(name){
-    return vscode.window.createTerminal(name);
+    return window.createTerminal(terminalName);
 }
 
 async function getCompilerPath(section){
-    uri = vscode.Uri.file(vscode.workspace.getConfiguration().get(section));
+    uri = Uri.file(workspace.getConfiguration().get(section));
     const fileExists = await isFileReal(uri);
     if(fileExists){
         console.log("Compiler Found");
-        vscode.window.showInformationMessage('NBC compiler found!');
+        window.showInformationMessage('NBC compiler found!');
     } else {
         console.log("Compiler Not Found");
-        vscode.window.showWarningMessage(`NBC compiler not found at '${uri.fsPath}'. Consider changing the path: [vscode://settings/${section}](command:nxchighlighter.openNxcSettings)`);
+        window.showWarningMessage(`NBC compiler not found at '${uri.fsPath}'. Consider changing the path: [vscode://settings/${section}](command:nxchighlighter.openNxcSettings)`);
     }
     return {
         uri: uri,
@@ -87,12 +92,14 @@ async function getCompilerPath(section){
 
 async function isFileReal(uri){
     try {
-        await vscode.workspace.fs.stat(uri);
+        await workspace.fs.stat(uri);
         return true;
     } catch {
         return false;
     }
 }
+
+function deactivate() {}
 
 module.exports = {
     activate,

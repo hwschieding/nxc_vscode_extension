@@ -34,8 +34,23 @@
                 "command": "nxchighlighter.testCompiler",
                 "title": "Test Compiler",
                 "category": "NXC"
+            },
+            {
+                "command": "nxchighlighter.compileAndDownload",
+                "title": "Compile And Download",
+                "category": "NXC",
+                "icon": "./images/download.png"
             }
         ],
+        "menus": {
+            "editor/title": [
+                {
+                    "when":"resourceLangId == nxc",
+                    "command": "nxchighlighter.compileAndDownload",
+                    "group": "navigation"
+                }
+            ]
+        },
         "configuration": {
             "title":"NXC",
             "properties": {
