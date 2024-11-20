@@ -1,17 +1,17 @@
 const {ExtensionContext, commands, workspace, window, Uri} = require('vscode');
+const EXTENSION_ID = 'nxchighlighter';
+const COMPILER_PATH_SECTION = 'NXC.nbcCompilerPath';
+const TERM_NAME = "NBC Compiler";
 
 /**
  * @param {ExtensionContext} context
  */
 
 async function activate(context) {
-    const EXTENSION_ID = 'nxchighlighter';
-    const COMPILER_PATH_SECTION = 'NXC.nbcCompilerPath';
-    const TERM_NAME = "NBC Compiler";
 
     console.log("Extension Running!");
 
-    let nbcUri = (await getCompilerPath(COMPILER_PATH_SECTION)).uri;
+    let nbcPath = await getCompilerPath(COMPILER_PATH_SECTION);
 
     const openNxcSettings = commands.registerCommand(`${EXTENSION_ID}.openNxcSettings`, function () {
         commands.executeCommand('workbench.action.openSettings', COMPILER_PATH_SECTION);
@@ -19,10 +19,7 @@ async function activate(context) {
 
     const onCompilerPathChange = workspace.onDidChangeConfiguration(async e => {
         if(e.affectsConfiguration(COMPILER_PATH_SECTION)){
-            const nbcPath = await getCompilerPath(COMPILER_PATH_SECTION);
-            if(nbcPath.valid){
-                nbcUri = nbcPath.uri;
-            }
+            nbcPath = await getCompilerPath(COMPILER_PATH_SECTION);
         }
     });
 
@@ -37,7 +34,8 @@ async function activate(context) {
     const compileAndDownload = commands.registerCommand(`${EXTENSION_ID}.compileAndDownload`, function () {
         const terminal = getNBCTerminal(TERM_NAME);
         let currentFile = window.activeTextEditor.document.fileName;
-        terminal.sendText(`'${nbcUri.fsPath}' -d '${currentFile}'`);
+        sendTextIfValidNbc(terminal, `'${nbcPath.uri.fsPath}' -d '${currentFile}'`, nbcPath.valid);
+        //terminal.sendText(`'${nbcPath.uri.fsPath}' -d '${currentFile}'`);
         terminal.show();
     })
 
@@ -49,7 +47,8 @@ async function activate(context) {
     
     const testCompiler = commands.registerCommand(`${EXTENSION_ID}.testCompiler`, function () {
         const terminal = getNBCTerminal(TERM_NAME);
-        terminal.sendText(`'${nbcUri.fsPath}' -help`);
+        sendTextIfValidNbc(terminal, `'${nbcPath.uri.fsPath}' -help`, nbcPath.valid);
+        //terminal.sendText(`'${nbcPath.uri.fsPath}' -help`);
         terminal.show();
     });
 
@@ -62,6 +61,14 @@ async function activate(context) {
         compileAndDownload,
         openNxcSettings
     );
+}
+
+function sendTextIfValidNbc(term, text, valid){
+    if(valid){
+        term.sendText(text);
+    } else{
+        window.showErrorMessage(`No NBC compiler detected. [Change Path Setting](command:${EXTENSION_ID}.openNxcSettings)`);
+    }
 }
 
 function getNBCTerminal(terminalName) {
@@ -78,11 +85,9 @@ async function getCompilerPath(section){
     uri = Uri.file(workspace.getConfiguration().get(section));
     const fileExists = await isFileReal(uri);
     if(fileExists){
-        console.log("Compiler Found");
         window.showInformationMessage('NBC compiler found!');
     } else {
-        console.log("Compiler Not Found");
-        window.showWarningMessage(`NBC compiler not found at '${uri.fsPath}'. Consider changing the path: [vscode://settings/${section}](command:nxchighlighter.openNxcSettings)`);
+        window.showWarningMessage(`NBC compiler not found at '${uri.fsPath}'. Consider changing the path: [Change Path Setting](command:${EXTENSION_ID}.openNxcSettings)`);
     }
     return {
         uri: uri,
@@ -92,7 +97,16 @@ async function getCompilerPath(section){
 
 async function isFileReal(uri){
     try {
-        await workspace.fs.stat(uri);
+        const fileStat = await workspace.fs.stat(uri);
+        console.log("test 1 passed");
+        if(fileStat.type !== 1){
+            return false;
+        }
+        console.log("test 2 passed");
+        if(!uri.fsPath.endsWith("nbc.exe")){
+            return false;
+        }
+        console.log("test 3 passed");
         return true;
     } catch {
         return false;
