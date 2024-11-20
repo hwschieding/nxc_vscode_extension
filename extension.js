@@ -11,6 +11,10 @@ async function activate(context) {
 
     let nbcUri = await getCompilerPath(COMPILER_PATH_SECTION);
 
+    const openNxcSettings = vscode.commands.registerCommand('nxchighlighter.openNxcSettings', function () {
+        vscode.commands.executeCommand('workbench.action.openSettings', COMPILER_PATH_SECTION);
+    });
+
     const onCompilerPathChange = vscode.workspace.onDidChangeConfiguration(async e => {
         if(e.affectsConfiguration(COMPILER_PATH_SECTION)){
             const nbcPath = await getCompilerPath(COMPILER_PATH_SECTION);
@@ -44,7 +48,8 @@ async function activate(context) {
         helloWorld, 
         twoPlusTwo, 
         openTerminal, 
-        testCompiler
+        testCompiler,
+        openNxcSettings
     );
 }
 
@@ -72,7 +77,7 @@ async function getCompilerPath(section){
         vscode.window.showInformationMessage('NBC compiler found!');
     } else {
         console.log("Compiler Not Found");
-        vscode.window.showWarningMessage(`NBC compiler not found at '${uri.fsPath}'.`);
+        vscode.window.showWarningMessage(`NBC compiler not found at '${uri.fsPath}'. Consider changing the path: [vscode://settings/${section}](command:nxchighlighter.openNxcSettings)`);
     }
     return {
         uri: uri,
