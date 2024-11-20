@@ -11,33 +11,41 @@ async function activate(context) {
 
     let nbcUri = await getCompilerPath(COMPILER_PATH_SECTION);
 
-    context.subscriptions.push(vscode.workspace.onDidChangeConfiguration(async e => {
+    const onCompilerPathChange = vscode.workspace.onDidChangeConfiguration(async e => {
         if(e.affectsConfiguration(COMPILER_PATH_SECTION)){
             const nbcPath = await getCompilerPath(COMPILER_PATH_SECTION);
             if(nbcPath.valid){
                 nbcUri = nbcPath.uri;
             }
         }
-    }))
+    });
 
-    context.subscriptions.push(vscode.commands.registerCommand('nxchighlighter.helloworld', function () {
+    const helloWorld = vscode.commands.registerCommand('nxchighlighter.helloworld', function () {
         vscode.window.showInformationMessage('Hello World from nxchighlighter!');
-    }));
+    });
 
-    context.subscriptions.push(vscode.commands.registerCommand('nxchighlighter.twoPlusTwo', function () {
+    const twoPlusTwo = vscode.commands.registerCommand('nxchighlighter.twoPlusTwo', function () {
         vscode.window.showInformationMessage((2 + 2).toString());
-    }));
+    });
 
-    context.subscriptions.push(vscode.commands.registerCommand('nxchighlighter.openTerminal', function () {
+    const openTerminal = vscode.commands.registerCommand('nxchighlighter.openTerminal', function () {
         const terminal = getNBCTerminal(TERM_NAME);
         terminal.sendText("echo 'Terminal Test Message'");
         terminal.show();
-    }));
+    });
     
-    context.subscriptions.push(vscode.commands.registerCommand('nxchighlighter.testCompiler', function () {
+    const testCompiler = vscode.commands.registerCommand('nxchighlighter.testCompiler', function () {
         const terminal = getNBCTerminal(TERM_NAME);
         terminal.sendText(`'${nbcUri.fsPath}' -help`);
-    }));
+    });
+
+    context.subscriptions.push(
+        onCompilerPathChange, 
+        helloWorld, 
+        twoPlusTwo, 
+        openTerminal, 
+        testCompiler
+    );
 }
 
 function deactivate() {}
@@ -64,7 +72,7 @@ async function getCompilerPath(section){
         vscode.window.showInformationMessage('NBC compiler found!');
     } else {
         console.log("Compiler Not Found");
-        vscode.window.showInformationMessage(`NBC compiler not found at '${uri.fsPath}'.\n New line test`);
+        vscode.window.showWarningMessage(`NBC compiler not found at '${uri.fsPath}'.`);
     }
     return {
         uri: uri,
