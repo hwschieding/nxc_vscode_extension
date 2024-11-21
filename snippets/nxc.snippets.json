@@ -1,7 +1,82 @@
 {
     "OnFwd":{
-        "prefix": ["OnFwd"],
+        "prefix": ["OnFwd()"],
         "body": ["OnFwd($0)"],
         "description": "OnFwd"
+    },
+    "main":{
+        "prefix":["main()"],
+        "body":["task main(){", "\t$0", "}"],
+        "description": "Main task"
+    },
+    "for":{
+        "prefix":["for()"],
+        "body":["for(int ${1:i} = 0; ${1:i} < $2; ${1:i}++){", "\t$0", "}"],
+        "description": "For loop"
+    },
+    "while":{
+        "prefix":"while()",
+        "body":["while($1)$0"],
+        "description": "While loop"
+    },
+    "repeat":{
+        "prefix":["repeat()"],
+        "body":["repeat($1){", "\t$0", "}"],
+        "description":"Repeat loop"
+    },
+    "do":{
+        "prefix":"do",
+        "body":["do{", "\t$1", "}$0"],
+        "description": "Do statement"
+    },
+    "if":{
+        "prefix":["if()"],
+        "body":["if($1)$0"],
+        "description": "If statement"
+    },
+    "else":{
+        "prefix":["else"],
+        "body":"else",
+        "description":"Else statement"
+    },
+    "if-else":{
+        "prefix":"if-else",
+        "body":["if($1){", "\t$2", "} else {", "\t$0", "}"],
+        "description":"If-else compound"
+    },
+    "switch":{
+        "prefix":"switch()",
+        "body":["switch($1){", "\t$0", "}"],
+        "description":"Switch statement"
+    },
+    "break":{
+        "prefix":"break",
+        "body":"break",
+        "description":"Break statement"
+    },
+    "case":{
+        "prefix":"case",
+        "body":["case :", "\t$0"],
+        "description":"Case label"
+    },
+    "default":{
+        "prefix":"default",
+        "body":["default :", "\t$0"],
+        "description":"Default Label"
+    },
+    "goto":{
+        "prefix":"goto",
+        "body":"goto $0",
+        "description":"Goto statement"
+    },
+    "until":{
+        "prefix":"until()",
+        "body":"until($0)",
+        "description":"Until statement"
+    },
+    "block-comment":{
+        "prefix:":["/\\*"],
+        "body":["$BLOCK_COMMENT_START", "\t$0", "$BLOCK_COMMENT_END"],
+        "description": "Block Comment"
     }
 }

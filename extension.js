@@ -34,7 +34,7 @@ async function activate(context) {
     const compileAndDownload = commands.registerCommand(`${EXTENSION_ID}.compileAndDownload`, function () {
         const terminal = getNBCTerminal(TERM_NAME);
         let currentFile = window.activeTextEditor.document.fileName;
-        sendTextIfValidNbc(terminal, `'${nbcPath.uri.fsPath}' -d '${currentFile}'`, nbcPath.valid);
+        sendTextIfValidNbc(terminal, `'${nbcPath.uri.fsPath}' -S=usb -d '${currentFile}'`, nbcPath.valid);
         //terminal.sendText(`'${nbcPath.uri.fsPath}' -d '${currentFile}'`);
         terminal.show();
     })
