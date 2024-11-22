@@ -13,7 +13,7 @@ def make_entry(f, name, description):
 
 
 if __name__ == "__main__":
-    with open("dev_scripts/snippet_writer_output.json", "a") as f:
+    with open("dev_scripts/snippet_writer_output.txt", "a") as f:
         running = True
         while running:
             snippet_name = input("Snippet name:")

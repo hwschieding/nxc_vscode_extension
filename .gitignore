@@ -2,4 +2,4 @@ vsc-extension-quickstart.md
 *.vsix
 CHANGELOG.md
 dev_scripts/reformat_output.json
-dev_scripts/snippet_writer_output.json
+dev_scripts/snippet_writer_output.txt
