@@ -498,5 +498,130 @@
         "prefix":"OUT_ABC",
         "body":"OUT_ABC",
         "description":"#define OUT_ABC 0x06"
+    },
+    "OUT_MODE_COAST":{
+        "prefix":"OUT_MODE_COAST",
+        "body":"OUT_MODE_COAST",
+        "description":"#define OUT_MODE_COAST 0x00"
+    },
+    "OUT_MODE_MOTORON":{
+        "prefix":"OUT_MODE_MOTORON",
+        "body":"OUT_MODE_MOTORON",
+        "description":"#define OUT_MODE_MOTORON 0x01"
+    },
+    "OUT_MODE_BRAKE":{
+        "prefix":"OUT_MODE_BRAKE",
+        "body":"OUT_MODE_BRAKE",
+        "description":"#define OUT_MODE_BRAKE 0x02"
+    },
+    "OUT_MODE_REGULATED":{
+        "prefix":"OUT_MODE_REGULATED",
+        "body":"OUT_MODE_REGULATED",
+        "description":"#define OUT_MODE_REGULATED 0x04"
+    },
+    "OUT_MODE_REGMETHOD":{
+        "prefix":"OUT_MODE_REGMETHOD",
+        "body":"OUT_MODE_REGMETHOD",
+        "description":"#define OUT_MODE_REGMETHOD 0xF0"
+    },
+    "OUT_OPTION_HOLDATLIMIT":{
+        "prefix": "OUT_OPTION_HOLDATLIMIT",
+        "body": "OUT_OPTION_HOLDATLIMIT",
+        "description": "#define OUT_OPTION_HOLDATLIMIT 0x10"
+    },
+    "OUT_OPTION_RAMPDOWNTOLIMIT":{
+        "prefix": "OUT_OPTION_RAMPDOWNTOLIMIT",
+        "body": "OUT_OPTION_RAMPDOWNTOLIMIT",
+        "description": "#define OUT_OPTION_RAMPDOWNTOLIMIT 0x20"
+    },
+    "OUT_REGOPTION_NO_SATURATION":{
+        "prefix": "OUT_REGOPTION_NO_SATURATION",
+        "body": "OUT_REGOPTION_NO_SATURATION",
+        "description": "#define OUT_REGOPTION_NO_SATURATION 0x01"
+    },
+    "OUT_RUNSTATE_IDLE":{
+        "prefix": "OUT_RUNSTATE_IDLE",
+        "body": "OUT_RUNSTATE_IDLE",
+        "description": "#define OUT_RUNSTATE_IDLE 0x00"
+    },
+    "OUT_RUNSTATE_RAMPUP":{
+        "prefix": "OUT_RUNSTATE_RAMPUP",
+        "body": "OUT_RUNSTATE_RAMPUP",
+        "description": "#define OUT_RUNSTATE_RAMPUP 0x10"
+    },
+    "OUT_RUNSTATE_RUNNING":{
+        "prefix": "OUT_RUNSTATE_RUNNING",
+        "body": "OUT_RUNSTATE_RUNNING",
+        "description": "#define OUT_RUNSTATE_RUNNING 0x20"
+    },
+    "OUT_RUNSTATE_RAMPDOWN":{
+        "prefix": "OUT_RUNSTATE_RAMPDOWN",
+        "body": "OUT_RUNSTATE_RAMPDOWN",
+        "description": "#define OUT_RUNSTATE_RAMPDOWN 0x40"
+    },
+    "OUT_RUNSTATE_HOLD":{
+        "prefix": "OUT_RUNSTATE_HOLD",
+        "body": "OUT_RUNSTATE_HOLD",
+        "description": "#define OUT_RUNSTATE_HOLD 0x60"
+    },
+    "OUT_REGMODE_IDLE":{
+        "prefix": "OUT_REGMODE_IDLE",
+        "body": "OUT_REGMODE_IDLE",
+        "description": "#define OUT_REGMODE_IDLE 0"
+    },
+    "OUT_REGMODE_SPEED":{
+        "prefix": "OUT_REGMODE_SPEED",
+        "body": "OUT_REGMODE_SPEED",
+        "description": "#define OUT_REGMODE_SPEED 1"
+    },
+    "OUT_REGMODE_SYNC":{
+        "prefix": "OUT_REGMODE_SYNC",
+        "body": "OUT_REGMODE_SYNC",
+        "description": "#define OUT_REGMODE_SYNC 2"
+    },
+    "OUT_REGMODE_POS":{
+        "prefix": "OUT_REGMODE_POS",
+        "body": "OUT_REGMODE_POS",
+        "description": "#define OUT_REGMODE_POS 4"
+    },
+    "UF_UPDATE_MODE":{
+        "prefix": "UF_UPDATE_MODE",
+        "body": "UF_UPDATE_MODE",
+        "description": "#define UF_UPDATE_MODE 0x01"
+    },
+    "UF_UPDATE_SPEED":{
+        "prefix": "UF_UPDATE_SPEED",
+        "body": "UF_UPDATE_SPEED",
+        "description": "#define UF_UPDATE_SPEED 0x02"
+    },
+    "UF_UPDATE_TACHO_LIMIT":{
+        "prefix": "UF_UPDATE_TACHO_LIMIT",
+        "body": "UF_UPDATE_TACHO_LIMIT",
+        "description": "#define UF_UPDATE_TACHO_LIMIT 0x04"
+    },
+    "UF_UPDATE_RESET_COUNT":{
+        "prefix": "UF_UPDATE_RESET_COUNT",
+        "body": "UF_UPDATE_RESET_COUNT",
+        "description": "#define UF_UPDATE_RESET_COUNT 0x08"
+    },
+    "UF_UPDATE_PID_VALUES":{
+        "prefix": "UF_UPDATE_PID_VALUES",
+        "body": "UF_UPDATE_PID_VALUES",
+        "description": "#define UF_UPDATE_PID_VALUES 0x10"
+    },
+    "UF_UPDATE_RESET_BLOCK_COUNT":{
+        "prefix": "UF_UPDATE_RESET_BLOCK_COUNT",
+        "body": "UF_UPDATE_RESET_BLOCK_COUNT",
+        "description": "#define UF_UPDATE_RESET_BLOCK_COUNT 0x20"
+    },
+    "UF_UPDATE_RESET_ROTATION_COUNT":{
+        "prefix": "UF_UPDATE_RESET_ROTATION_COUNT",
+        "body": "UF_UPDATE_RESET_ROTATION_COUNT",
+        "description": "#define UF_UPDATE_RESET_ROTATION_COUNT 0x40"
+    },
+    "UF_PENDING_UPDATES":{
+        "prefix": "UF_PENDING_UPDATES",
+        "body": "UF_PENDING_UPDATES",
+        "description": "#define UF_PENDING_UPDATES 0x80"
     }
 }
