@@ -157,66 +157,111 @@
     "#if":{
         "prefix":"#if",
         "body":"#if",
-        "description":"#if [condition]"
+        "description":["#if [condition]"]
     },
     "#elif":{
         "prefix":"#elif",
         "body":"#elif",
-        "description":["#elif", "//if condition is not true, compile following code"]
+        "description":["#elif [condition]"]
+    },
+    "void":{
+        "prefix":"void",
+        "body":"void",
+        "description":"void [name]"
+    },
+    "sub":{
+        "prefix":"sub",
+        "body":"sub",
+        "description":"sub [name]"
     },
     "bool":{
         "prefix":"bool",
         "body":"bool",
-        "description":["bool type","//unsigned 8-bit value"]
+        "description":"bool [name]"
     },
     "byte":{
         "prefix":"byte",
         "body":"byte",
-        "description":["byte type","//unsigned 8-bit value"]
+        "description":"byte [name]"
     },
     "char":{
         "prefix":"char",
         "body":"char",
-        "description":["char type","//signed 8-bit value"]
+        "description":"char [name]"
     },
     "int":{
         "prefix":"int",
         "body":"int",
-        "description":["int type","//signed 16-bit value"]
+        "description":"int [name]"
     },
     "short":{
         "prefix":"short",
         "body":"short",
-        "description":["short type","/*","\tsigned 16-bit value","\talias for int","*/"]
+        "description":"short [name]"
     },
     "long":{
         "prefix":"long",
         "body":"long",
-        "description":["long type","//signed 32-bit value"]
+        "description":"long [name]"
     },
     "float":{
         "prefix":"float",
         "body":"float",
-        "description":["float type","//32-bit IEEE 754 floating point value"]
+        "description":"float [name]"
     },
     "mutex":{
         "prefix":"mutex",
         "body":"mutex",
-        "description":["mutex type","/*","\t32-bit value","\tused to synchronize access to resources shared across multiple threads","*/"]
+        "description":["mutex [name]","/*","\t32-bit value","\tused to synchronize access to resources shared across multiple threads","*/"]
     },
     "string":{
         "prefix":"string",
         "body":"string",
-        "description":["string type","//byte array"]
+        "description":"string [name]"
+    },
+    "enum":{
+        "prefix":"enum",
+        "body":"enum",
+        "description":"enum [name]"
+    },
+    "typedef":{
+        "prefix":"typedef",
+        "body":"typedef",
+        "description":"typedef [type] [name]"
     },
     "struct":{
         "prefix":"struct",
         "body":"struct",
-        "description":["struct","//user defined aggregate types"]
+        "description":"struct [name]"
     },
     "unsigned":{
         "prefix":"unsigned",
         "body":"unsigned",
-        "description":["unsigned [type] [declaration]"]
+        "description":"unsigned [declaration]"
+    },
+    "static":{
+        "prefix":"static",
+        "body":"static",
+        "description":"static [declaration]"
+    },
+    "inline":{
+        "prefix":"inline",
+        "body":"inline",
+        "description":"inline [declaration]"
+    },
+    "safecall":{
+        "prefix":"safecall",
+        "body":"safecall",
+        "description":"safecall [declaration]"
+    },
+    "const":{
+        "prefix":"const",
+        "body":"const",
+        "description":"const [declaration]"
+    },
+    "task":{
+        "prefix":"task",
+        "body":["task $1() {", "\t$0", "}"],
+        "description":["task [name]() {", "\tbody", "}"]
     }
 }
