@@ -55,12 +55,17 @@
             "title":"NXC",
             "properties": {
                 "NXC.nbcCompilerPath": {
-                    "type": "string",
-                    "default":"C:\\Program Files (x86)\\BricxCC\\nbc.exe",
-                    "markdownDescription": "Filepath to the NBC compiler",
-                    "format": "uri",
-                    "scope": "machine"
+                "type": "string",
+                "default":"C:\\Program Files (x86)\\BricxCC\\nbc.exe",
+                "markdownDescription": "Filepath to the NBC compiler",
+                "format": "uri",
+                "scope": "machine"
                 }
+            }
+        },
+        "configurationDefaults": {
+            "[nxc]": {
+                "editor.snippetSuggestions": "top"
             }
         },
         "languages": [

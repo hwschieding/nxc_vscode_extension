@@ -6,7 +6,6 @@ const TERM_NAME = "NBC Compiler";
 /**
  * @param {ExtensionContext} context
  */
-
 async function activate(context) {
 
     console.log("Extension Running!");
@@ -74,7 +73,7 @@ function sendTextIfValidNbc(term, text, valid){
 function getNBCTerminal(terminalName) {
     const terminals = window.terminals;
     for(let i = 0; i < terminals.length; i++){
-        if(terminals[i].name == terminalName){
+        if(terminals[i].name === terminalName){
             return terminals[i];
         }
     }
