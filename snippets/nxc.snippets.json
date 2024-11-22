@@ -464,4 +464,39 @@
         "body":"SENSOR_SOUND",
         "description":"_SENSOR_CFG(SENSOR_TYPE_LIGHT_SOUND,SENSOR_MODE_PERCENT)"
     },
+    "OUT_A":{
+        "prefix":"OUT_A",
+        "body":"OUT_A",
+        "description":"#define OUT_A 0x00"
+    },
+    "OUT_B":{
+        "prefix":"OUT_B",
+        "body":"OUT_B",
+        "description":"#define OUT_B 0x01"
+    },
+    "OUT_C":{
+        "prefix":"OUT_C",
+        "body":"OUT_C",
+        "description":"#define OUT_C 0x02"
+    },
+    "OUT_AB":{
+        "prefix":"OUT_AB",
+        "body":"OUT_AB",
+        "description":"#define OUT_AB 0x03"
+    },
+    "OUT_AC":{
+        "prefix":"OUT_AC",
+        "body":"OUT_AC",
+        "description":"#define OUT_AC 0x04"
+    },
+    "OUT_BC":{
+        "prefix":"OUT_BC",
+        "body":"OUT_BC",
+        "description":"#define OUT_BC 0x05"
+    },
+    "OUT_ABC":{
+        "prefix":"OUT_ABC",
+        "body":"OUT_ABC",
+        "description":"#define OUT_ABC 0x06"
+    }
 }
