@@ -263,5 +263,205 @@
         "prefix":"task",
         "body":["task $1() {", "\t$0", "}"],
         "description":["task [name]() {", "\tbody", "}"]
+    },
+    "S1":{
+        "prefix":"S1",
+        "body":"S1",
+        "description":"#define S1 0"
+    },
+    "S2":{
+        "prefix":"S2",
+        "body":"S2",
+        "description":"#define S2 1"
+    },
+    "S3":{
+        "prefix":"S3",
+        "body":"S3",
+        "description":"#define S3 2"
     }
+    ,"S4":{
+        "prefix":"S4",
+        "body":"S4",
+        "description":"#define S4 3"
+    },
+    "SENSOR_TYPE_NONE":{
+        "prefix":"SENSOR_TYPE_NONE",
+        "body":"SENSOR_TYPE_NONE",
+        "description":"#define SENSOR_TYPE_NONE IN_TYPE_NO_SENSOR"
+    },
+    "SENSOR_TYPE_TOUCH":{
+        "prefix":"SENSOR_TYPE_TOUCH",
+        "body":"SENSOR_TYPE_TOUCH",
+        "description":"#define SENSOR_TYPE_TOUCH IN_TYPE_SWITCH"
+    },
+    "SENSOR_TYPE_TEMPERATURE":{
+        "prefix":"SENSOR_TYPE_TEMPERATURE",
+        "body":"SENSOR_TYPE_TEMPERATURE",
+        "description":"#define SENSOR_TYPE_TEMPERATURE IN_TYPE_TEMPERATURE"
+    },
+    "SENSOR_TYPE_LIGHT":{
+        "prefix":"SENSOR_TYPE_LIGHT",
+        "body":"SENSOR_TYPE_LIGHT",
+        "description":"#define SENSOR_TYPE_LIGHT IN_TYPE_REFLECTION"
+    },
+    "SENSOR_TYPE_ROTATION":{
+        "prefix":"SENSOR_TYPE_ROTATION",
+        "body":"SENSOR_TYPE_ROTATION",
+        "description":"#define SENSOR_TYPE_ROTATION IN_TYPE_ANGLE"
+    },
+    "SENSOR_TYPE_LIGHT_ACTIVE":{
+        "prefix":"SENSOR_TYPE_LIGHT_ACTIVE",
+        "body":"SENSOR_TYPE_LIGHT_ACTIVE",
+        "description":"#define SENSOR_TYPE_LIGHT_ACTIVE IN_TYPE_LIGHT_ACTIVE"
+    },
+    "SENSOR_TYPE_LIGHT_INACTIVE":{
+        "prefix":"SENSOR_TYPE_LIGHT_INACTIVE",
+        "body":"SENSOR_TYPE_LIGHT_INACTIVE",
+        "description":"#define SENSOR_TYPE_LIGHT_INACTIVE IN_TYPE_LIGHT_INACTIVE"
+    },
+    "SENSOR_TYPE_SOUND_DB":{
+        "prefix":"SENSOR_TYPE_SOUND_DB",
+        "body":"SENSOR_TYPE_SOUND_DB",
+        "description":"#define SENSOR_TYPE_SOUND_DB IN_TYPE_SOUND_DB"
+    },
+    "SENSOR_TYPE_SOUND_DBA":{
+        "prefix":"SENSOR_TYPE_SOUND_DBA",
+        "body":"SENSOR_TYPE_SOUND_DBA",
+        "description":"#define SENSOR_TYPE_SOUND_DBA IN_TYPE_SOUND_DBA"
+    },
+    "SENSOR_TYPE_CUSTOM":{
+        "prefix":"SENSOR_TYPE_CUSTOM",
+        "body":"SENSOR_TYPE_CUSTOM",
+        "description":"#define SENSOR_TYPE_CUSTOM IN_TYPE_CUSTOM"
+    },
+    "SENSOR_TYPE_LOWSPEED":{
+        "prefix":"SENSOR_TYPE_LOWSPEED",
+        "body":"SENSOR_TYPE_LOWSPEED",
+        "description":"#define SENSOR_TYPE_LOWSPEED IN_TYPE_LOWSPEED"
+    },
+    "SENSOR_TYPE_LOWSPEED_9V":{
+        "prefix":"SENSOR_TYPE_LOWSPEED_9V",
+        "body":"SENSOR_TYPE_LOWSPEED_9V",
+        "description":"#define SENSOR_TYPE_LOWSPEED_9V IN_TYPE_LOWSPEED_9V"
+    },
+    "SENSOR_TYPE_HIGHSPEED":{
+        "prefix":"SENSOR_TYPE_HIGHSPEED",
+        "body":"SENSOR_TYPE_HIGHSPEED",
+        "description":"#define SENSOR_TYPE_HIGHSPEED IN_TYPE_HISPEED"
+    },
+    "SENSOR_TYPE_COLORFULL":{
+        "prefix":"SENSOR_TYPE_COLORFULL",
+        "body":"SENSOR_TYPE_COLORFULL",
+        "description":"#define SENSOR_TYPE_COLORFULL IN_TYPE_COLORFULL"
+    },
+    "SENSOR_TYPE_COLORRED":{
+        "prefix":"SENSOR_TYPE_COLORRED",
+        "body":"SENSOR_TYPE_COLORRED",
+        "description":"#define SENSOR_TYPE_COLORRED IN_TYPE_COLORRED"
+    },
+    "SENSOR_TYPE_COLORGREEN":{
+        "prefix":"SENSOR_TYPE_COLORGREEN",
+        "body":"SENSOR_TYPE_COLORGREEN",
+        "description":"#define SENSOR_TYPE_COLORGREEN IN_TYPE_COLORGREEN"
+    },
+    "SENSOR_TYPE_COLORBLUE":{
+        "prefix":"SENSOR_TYPE_COLORBLUE",
+        "body":"SENSOR_TYPE_COLORBLUE",
+        "description":"#define SENSOR_TYPE_COLORBLUE IN_TYPE_COLORBLUE"
+    },
+    "SENSOR_TYPE_COLORNONE":{
+        "prefix":"SENSOR_TYPE_COLORNONE",
+        "body":"SENSOR_TYPE_COLORNONE",
+        "description":"#define SENSOR_TYPE_COLORNONE IN_TYPE_COLORNONE"
+    },
+    "SENSOR_MODE_RAW":{
+        "prefix":"SENSOR_MODE_RAW",
+        "body":"SENSOR_MODE_RAW",
+        "description":"define SENSOR_MODE_RAW IN_MODE_RAW"
+    },
+    "SENSOR_MODE_BOOL":{
+        "prefix":"SENSOR_MODE_BOOL",
+        "body":"SENSOR_MODE_BOOL",
+        "description":"define SENSOR_MODE_BOOL IN_MODE_BOOLEAN"
+    },
+    "SENSOR_MODE_EDGE":{
+        "prefix":"SENSOR_MODE_EDGE",
+        "body":"SENSOR_MODE_EDGE",
+        "description":"define SENSOR_MODE_EDGE IN_MODE_TRANSITIONCNT"
+    },
+    "SENSOR_MODE_PULSE":{
+        "prefix":"SENSOR_MODE_PULSE",
+        "body":"SENSOR_MODE_PULSE",
+        "description":"define SENSOR_MODE_PULSE IN_MODE_PERIODCOUNTER"
+    },
+    "SENSOR_MODE_PERCENT":{
+        "prefix":"SENSOR_MODE_PERCENT",
+        "body":"SENSOR_MODE_PERCENT",
+        "description":"define SENSOR_MODE_PERCENT IN_MODE_PCTFULLSCALE"
+    },
+    "SENSOR_MODE_CELSIUS":{
+        "prefix":"SENSOR_MODE_CELSIUS",
+        "body":"SENSOR_MODE_CELSIUS",
+        "description":"define SENSOR_MODE_CELSIUS IN_MODE_CELSIUS"
+    },
+    "SENSOR_MODE_FAHRENHEIT":{
+        "prefix":"SENSOR_MODE_FAHRENHEIT",
+        "body":"SENSOR_MODE_FAHRENHEIT",
+        "description":"define SENSOR_MODE_FAHRENHEIT IN_MODE_FAHRENHEIT"
+    },
+    "SENSOR_MODE_ROTATION":{
+        "prefix":"SENSOR_MODE_ROTATION",
+        "body":"SENSOR_MODE_ROTATION",
+        "description":"define SENSOR_MODE_ROTATION IN_MODE_ANGLESTEP"
+    },
+    "_SENSOR_CFG":{
+        "prefix":"_SENSOR_CFG",
+        "body":"_SENSOR_CFG",
+        "description":"#define _SENSOR_CFG(_type, _mode) (((_type)<<8)+(_mode))"
+    },
+    "SENSOR_TOUCH":{
+        "prefix":"SENSOR_TOUCH",
+        "body":"SENSOR_TOUCH",
+        "description":"_SENSOR_CFG(SENSOR_TYPE_TOUCH,SENSOR_MODE_BOOL)"
+    },
+    "SENSOR_LIGHT":{
+        "prefix":"SENSOR_LIGHT",
+        "body":"SENSOR_LIGHT",
+        "description":"_SENSOR_CFG(SENSOR_TYPE_LIGHT,SENSOR_MODE_PERCENT)"
+    },
+    "SENSOR_ROTATION":{
+        "prefix":"SENSOR_ROTATION",
+        "body":"SENSOR_ROTATION",
+        "description":"_SENSOR_CFG(SENSOR_TYPE_ROTATION,SENSOR_MODE_ROTATION)"
+    },
+    "SENSOR_CELCIUS":{
+        "prefix":"SENSOR_CELCIUS",
+        "body":"SENSOR_CELCIUS",
+        "description":"_SENSOR_CFG(SENSOR_TYPE_TEMPERATURE,SENSOR_MODE_CELCIUS)"
+    },
+    "SENSOR_FAHRENHEIT":{
+        "prefix":"SENSOR_FAHRENHEIT",
+        "body":"SENSOR_FAHRENHEIT",
+        "description":"_SENSOR_CFG(SENSOR_TYPE_TEMPERATURE,SENSOR_MODE_FAHRENHEIT)"
+    },
+    "SENSOR_PULSE":{
+        "prefix":"SENSOR_PULSE",
+        "body":"SENSOR_PULSE",
+        "description":"_SENSOR_CFG(SENSOR_TYPE_TOUCH,SENSOR_MODE_PULSE)"
+    },
+    "SENSOR_EDGE":{
+        "prefix":"SENSOR_EDGE",
+        "body":"SENSOR_EDGE",
+        "description":"_SENSOR_CFG(SENSOR_TYPE_TOUCH,SENSOR_MODE_EDGE)"
+    },
+    "SENSOR_NXTLIGHT":{
+        "prefix":"SENSOR_NXTLIGHT",
+        "body":"SENSOR_NXTLIGHT",
+        "description":"_SENSOR_CFG(SENSOR_TYPE_LIGHT_ACTIVE,SENSOR_MODE_PERCENT)"
+    },
+    "SENSOR_SOUND":{
+        "prefix":"SENSOR_SOUND",
+        "body":"SENSOR_SOUND",
+        "description":"_SENSOR_CFG(SENSOR_TYPE_LIGHT_SOUND,SENSOR_MODE_PERCENT)"
+    },
 }
