@@ -3,8 +3,8 @@ import json
 def make_entry(f, name, description):
     print(f"{name}, {description}")
     snippet = {
-        "prefix":name,
-        "body":name,
+        "prefix":f"{name}",
+        "body":f"{name}",
         "description":description
     }
     snippet_json = f"\"{name}\":" + json.dumps(snippet) + ",\n"

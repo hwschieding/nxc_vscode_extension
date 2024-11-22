@@ -261,13 +261,291 @@
     },
     "task":{
         "prefix":"task",
-        "body":["task $1() {", "\t$0", "}"],
+        "body":["task $1($2) {", "\t$0", "}"],
         "description":["task [name]() {", "\tbody", "}"]
+    },
+    "SetSensorType":{
+        "prefix":"SetSensorType()",
+        "body":"SetSensorType(&1)&0",
+        "description":"oid SetSensorType (const byte &port, byte type)"
+    },
+    "SetSensorMode":{
+    "prefix": "SetSensorMode()",
+    "body": "SetSensorMode($1)$0",
+    "description": "void SetSensorMode (const byte &port, byte mode)"
+    },
+    "ClearSensor":{
+        "prefix": "ClearSensor()",
+        "body": "ClearSensor($1)$0",
+        "description": "void ClearSensor (const byte &port)"
+    },
+    "ResetSensor":{
+        "prefix": "ResetSensor()",
+        "body": "ResetSensor($1)$0",
+        "description": "void ResetSensor (const byte &port)"
+    },
+    "SetSensor":{
+        "prefix": "SetSensor()",
+        "body": "SetSensor($1)$0",
+        "description": "void SetSensor (const byte &port, const unsigned int config)"
+    },
+    "SetSensorTouch":{
+        "prefix": "SetSensorTouch()",
+        "body": "SetSensorTouch($1)$0",
+        "description": "void SetSensorTouch (const byte &port)"
+    },
+    "SetSensorLight":{
+        "prefix": "SetSensorLight()",
+        "body": "SetSensorLight($1)$0",
+        "description": "void SetSensorLight (const byte &port, bool bActive=true)"
+    },
+    "SetSensorSound":{
+        "prefix": "SetSensorSound()",
+        "body": "SetSensorSound($1)$0",
+        "description": "void SetSensorSound (const byte &port, bool bdBScaling=true)"
+    },
+    "SetSensorLowspeed":{
+        "prefix": "SetSensorLowspeed()",
+        "body": "SetSensorLowspeed($1)$0",
+        "description": "void SetSensorLowspeed (const byte &port, bool bIsPowered=true)"
+    },
+    "SetSensorUltrasonic":{
+        "prefix": "SetSensorUltrasonic()",
+        "body": "SetSensorUltrasonic($1)$0",
+        "description": "void SetSensorUltrasonic (const byte &port)"
+    },
+    "SetSensorEMeter":{
+        "prefix": "SetSensorEMeter()",
+        "body": "SetSensorEMeter($1)$0",
+        "description": "void SetSensorEMeter (const byte &port)"
+    },
+    "SetSensorTemperature":{
+        "prefix": "SetSensorTemperature()",
+        "body": "SetSensorTemperature($1)$0",
+        "description": "void SetSensorTemperature (const byte &port)"
+    },
+    "SetSensorColorFull":{
+        "prefix": "SetSensorColorFull()",
+        "body": "SetSensorColorFull($1)$0",
+        "description": "void SetSensorColorFull (const byte &port)"
+    },
+    "SetSensorColorRed":{
+        "prefix": "SetSensorColorRed()",
+        "body": "SetSensorColorRed($1)$0",
+        "description": "void SetSensorColorRed (const byte &port)"
+    },
+    "SetSensorColorGreen":{
+        "prefix": "SetSensorColorGreen()",
+        "body": "SetSensorColorGreen($1)$0",
+        "description": "void SetSensorColorGreen (const byte &port)"
+    },
+    "SetSensorColorBlue":{
+        "prefix": "SetSensorColorBlue()",
+        "body": "SetSensorColorBlue($1)$0",
+        "description": "void SetSensorColorBlue (const byte &port)"
+    },
+    "SetSensorColorNone":{
+        "prefix": "SetSensorColorNone()",
+        "body": "SetSensorColorNone($1)$0",
+        "description": "void SetSensorColorNone (const byte &port)"
+    },
+    "GetInput":{
+        "prefix": "GetInput()",
+        "body": "GetInput($1)$0",
+        "description": "variant GetInput (const byte &port, const byte field)"
+    },
+    "SetInput":{
+        "prefix": "SetInput()",
+        "body": "SetInput($1)$0",
+        "description": "void SetInput (const byte &port, const int field, variant value)"
+    },
+    "Sensor":{
+        "prefix": "Sensor()",
+        "body": "Sensor($1)$0",
+        "description": "unsigned int Sensor (const byte &port)"
+    },
+    "SensorBoolean":{
+        "prefix": "SensorBoolean()",
+        "body": "SensorBoolean($1)$0",
+        "description": "bool SensorBoolean (const byte port)"
+    },
+    "SensorDigiPinsDirection":{
+        "prefix": "SensorDigiPinsDirection()",
+        "body": "SensorDigiPinsDirection($1)$0",
+        "description": "byte SensorDigiPinsDirection (const byte port)"
+    },
+    "SensorDigiPinsOutputLevel":{
+        "prefix": "SensorDigiPinsOutputLevel()",
+        "body": "SensorDigiPinsOutputLevel($1)$0",
+        "description": "byte SensorDigiPinsOutputLevel (const byte port)"
+    },
+    "SensorDigiPinsStatus":{
+        "prefix": "SensorDigiPinsStatus()",
+        "body": "SensorDigiPinsStatus($1)$0",
+        "description": "byte SensorDigiPinsStatus (const byte port)"
+    },
+    "SensorInvalid":{
+        "prefix": "SensorInvalid()",
+        "body": "SensorInvalid($1)$0",
+        "description": "bool SensorInvalid (const byte &port)"
+    },
+    "SensorMode":{
+        "prefix": "SensorMode()",
+        "body": "SensorMode($1)$0",
+        "description": "byte SensorMode (const byte &port)"
+    },
+    "SensorNormalized":{
+        "prefix": "SensorNormalized()",
+        "body": "SensorNormalized($1)$0",
+        "description": "unsigned int SensorNormalized (const byte &port)"
+    },
+    "SensorRaw":{
+        "prefix": "SensorRaw()",
+        "body": "SensorRaw($1)$0",
+        "description": "unsigned int SensorRaw (const byte &port)"
+    },
+    "SensorScaled":{
+        "prefix": "SensorScaled()",
+        "body": "SensorScaled($1)$0",
+        "description": "unsigned int SensorScaled (const byte &port)"
+    },
+    "SensorType":{
+        "prefix": "SensorType()",
+        "body": "SensorType($1)$0",
+        "description": "byte SensorType (const byte &port)"
+    },
+    "SensorValue":{
+        "prefix": "SensorValue()",
+        "body": "SensorValue($1)$0",
+        "description": "unsigned int SensorValue (const byte &port)"
+    },
+    "SensorValueBool":{
+        "prefix": "SensorValueBool()",
+        "body": "SensorValueBool($1)$0",
+        "description": "bool SensorValueBool (const byte port)"
+    },
+    "SensorValueRaw":{
+        "prefix": "SensorValueRaw()",
+        "body": "SensorValueRaw($1)$0",
+        "description": "unsigned int SensorValueRaw (const byte &port)"
+    },
+    "CustomSensorActiveStatus":{
+        "prefix": "CustomSensorActiveStatus()",
+        "body": "CustomSensorActiveStatus($1)$0",
+        "description": "byte CustomSensorActiveStatus (byte port)"
+    },
+    "CustomSensorPercentFullScale":{
+        "prefix": "CustomSensorPercentFullScale()",
+        "body": "CustomSensorPercentFullScale($1)$0",
+        "description": "byte CustomSensorPercentFullScale (byte port)"
+    },
+    "CustomSensorZeroOffset":{
+        "prefix": "CustomSensorZeroOffset()",
+        "body": "CustomSensorZeroOffset($1)$0",
+        "description": "unsigned int CustomSensorZeroOffset (byte port)"
+    },
+    "SetCustomSensorActiveStatus":{
+        "prefix": "SetCustomSensorActiveStatus()",
+        "body": "SetCustomSensorActiveStatus($1)$0",
+        "description": "void SetCustomSensorActiveStatus (byte port, byte activeStatus)"
+    },
+    "SetCustomSensorPercentFullScale":{
+        "prefix": "SetCustomSensorPercentFullScale()",
+        "body": "SetCustomSensorPercentFullScale($1)$0",
+        "description": "void SetCustomSensorPercentFullScale (byte port, byte pctFullScale)"
+    },
+    "SetCustomSensorZeroOffset":{
+        "prefix": "SetCustomSensorZeroOffset()",
+        "body": "SetCustomSensorZeroOffset($1)$0",
+        "description": "void SetCustomSensorZeroOffset (byte port, int zeroOffset)"
+    },
+    "SetSensorBoolean":{
+        "prefix": "SetSensorBoolean()",
+        "body": "SetSensorBoolean($1)$0",
+        "description": "void SetSensorBoolean (byte port, bool value)"
+    },
+    "SetSensorDigiPinsDirection":{
+        "prefix": "SetSensorDigiPinsDirection()",
+        "body": "SetSensorDigiPinsDirection($1)$0",
+        "description": "void SetSensorDigiPinsDirection (byte port, byte direction)"
+    },
+    "SetSensorDigiPinsOutputLevel":{
+        "prefix": "SetSensorDigiPinsOutputLevel()",
+        "body": "SetSensorDigiPinsOutputLevel($1)$0",
+        "description": "void SetSensorDigiPinsOutputLevel (byte port, byte outputLevel)"
+    },
+    "SetSensorDigiPinsStatus":{
+        "prefix": "SetSensorDigiPinsStatus()",
+        "body": "SetSensorDigiPinsStatus($1)$0",
+        "description": "void SetSensorDigiPinsStatus (byte port, byte status)"
+    },
+    "SysColorSensorRead":{
+        "prefix": "SysColorSensorRead()",
+        "body": "SysColorSensorRead($1)$0",
+        "description": "void SysColorSensorRead (ColorSensorReadType &args)"
+    },
+    "ReadSensorColorEx":{
+        "prefix": "ReadSensorColorEx()",
+        "body": "ReadSensorColorEx($1)$0",
+        "description": "int ReadSensorColorEx (const byte &port, int &colorval, unsigned int &raw[ ], unsigned int &norm[ ], int &scaled[ ])"
+    },
+    "ReadSensorColorRaw":{
+        "prefix": "ReadSensorColorRaw()",
+        "body": "ReadSensorColorRaw($1)$0",
+        "description": "int ReadSensorColorRaw (const byte &port, unsigned int &rawVals[ ])"
+    },
+    "ColorADRaw":{
+        "prefix": "ColorADRaw()",
+        "body": "ColorADRaw($1)$0",
+        "description": "unsigned int ColorADRaw (byte port, byte color)"
+    },
+    "ColorBoolean":{
+        "prefix": "ColorBoolean()",
+        "body": "ColorBoolean($1)$0",
+        "description": "bool ColorBoolean (byte port, byte color)"
+    },
+    "ColorCalibration":{
+        "prefix": "ColorCalibration()",
+        "body": "ColorCalibration($1)$0",
+        "description": "long ColorCalibration (byte port, byte point, byte color)"
+    },
+    "ColorCalibrationState":{
+        "prefix": "ColorCalibrationState()",
+        "body": "ColorCalibrationState($1)$0",
+        "description": "byte ColorCalibrationState (byte port)"
+    },
+    "ColorCallLimits":{
+        "prefix": "ColorCallLimits()",
+        "body": "ColorCallLimits($1)$0",
+        "description": "unsigned int ColorCalLimits (byte port, byte point)"
+    },
+    "ColorSensorRaw":{
+        "prefix": "ColorSensorRaw()",
+        "body": "ColorSensorRaw($1)$0",
+        "description": "unsigned int ColorSensorRaw (byte port, byte color)"
+    },
+    "ColorSensorValue":{
+        "prefix": "ColorSensorValue()",
+        "body": "ColorSensorValue($1)$0",
+        "description": "unsigned int ColorSensorValue (byte port, byte color)"
+    },
+    "SysInputPinFunction":{
+        "prefix": "SysInputPinFunction()",
+        "body": "SysInputPinFunction($1)$0",
+        "description": "void SysInputPinFunction (InputPinFunctionType &args)"
     },
     "S1":{"prefix":"S1","body":"S1","description":"#define S1 0"},
     "S2":{"prefix":"S2","body":"S2","description":"#define S2 1"},
     "S3":{"prefix":"S3","body":"S3","description":"#define S3 2"},
     "S4":{"prefix":"S4","body":"S4","description":"#define S4 3"},
+    "IN_1":{"prefix": "IN_1", "body": "IN_1", "description": "#define IN_1 0x00"},
+    "IN_2":{"prefix": "IN_2", "body": "IN_2", "description": "#define IN_2 0x01"},
+    "IN_3":{"prefix": "IN_3", "body": "IN_3", "description": "#define IN_3 0x02"},
+    "IN_4":{"prefix": "IN_4", "body": "IN_4", "description": "#define IN_4 0x03"},
+    "SENSOR_1":{"prefix": "SENSOR_1", "body": "SENSOR_1", "description": "#define SENSOR_1 Sensor(S1)"},
+    "SENSOR_2":{"prefix": "SENSOR_2", "body": "SENSOR_2", "description": "#define SENSOR_2 Sensor(S2)"},
+    "SENSOR_3":{"prefix": "SENSOR_3", "body": "SENSOR_3", "description": "#define SENSOR_3 Sensor(S3)"},
+    "SENSOR_4":{"prefix": "SENSOR_4", "body": "SENSOR_4", "description": "#define SENSOR_4 Sensor(S4)"},
     "SENSOR_TYPE_NONE":{"prefix":"SENSOR_TYPE_NONE","body":"SENSOR_TYPE_NONE","description":"#define SENSOR_TYPE_NONE IN_TYPE_NO_SENSOR"},
     "SENSOR_TYPE_TOUCH":{"prefix":"SENSOR_TYPE_TOUCH","body":"SENSOR_TYPE_TOUCH","description":"#define SENSOR_TYPE_TOUCH IN_TYPE_SWITCH"},
     "SENSOR_TYPE_TEMPERATURE":{"prefix":"SENSOR_TYPE_TEMPERATURE","body":"SENSOR_TYPE_TEMPERATURE","description":"#define SENSOR_TYPE_TEMPERATURE IN_TYPE_TEMPERATURE"},
