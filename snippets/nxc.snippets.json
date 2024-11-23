@@ -534,6 +534,241 @@
         "body": "SysInputPinFunction($1)$0",
         "description": "void SysInputPinFunction (InputPinFunctionType &args)"
     },
+    "ResetScreen":{
+        "prefix": "ResetScreen()",
+        "body": "ResetScreen",
+        "description": "void ResetScreen ()"
+    },
+    "CircleOut":{
+        "prefix": "CircleOut()",
+        "body": "CircleOut($1)$0",
+        "description": "char CircleOut (int x, int y, byte radius, unsigned long options=DRAW_OPT_NORMAL)"
+    },
+    "LineOut":{
+        "prefix": "LineOut()",
+        "body": "LineOut($1)$0",
+        "description": "char LineOut (int x1, int y1, int x2, int y2, unsigned long options=DRAW_OPT_NORMAL)"
+    },
+    "PointOut":{
+        "prefix": "PointOut()",
+        "body": "PointOut($1)$0",
+        "description": "char PointOut (int x, int y, unsigned long options=DRAW_OPT_NORMAL)"
+    },
+    "RectOut":{
+        "prefix": "RectOut()",
+        "body": "RectOut($1)$0",
+        "description": " char RectOut (int x, int y, int width, int height, unsigned long options=DRAW_OPT_NORMAL)"
+    },
+    "TextOut":{
+        "prefix": "TextOut()",
+        "body": "TextOut($1)$0",
+        "description": " char TextOut (int x, int y, string str, unsigned long options=DRAW_OPT_NORMAL)"
+    },
+    "NumOut":{
+        "prefix": "NumOut()",
+        "body": "NumOut($1)$0",
+        "description": "char NumOut (int x, int y, variant value, unsigned long options=DRAW_OPT_NORMAL)"
+    },
+    "EllipseOut":{
+        "prefix": "EllipseOut()",
+        "body": "EllipseOut($1)$0",
+        "description": "char EllipseOut (int x, int y, byte radiusX, byte radiusY, unsigned long options=DRAW_OPT_NORMAL)"
+    },
+    "PolyOut":{
+        "prefix": "PolyOut()",
+        "body": "PolyOut($1)$0",
+        "description": "char PolyOut (LocationType points[ ], unsigned long options=DRAW_OPT_NORMAL)"
+    },
+    "FontTextOut":{
+        "prefix": "FontTextOut()",
+        "body": "FontTextOut($1)$0",
+        "description": "char FontTextOut (int x, int y, string filename, string str, unsigned long options=DRAW_OPT_NORMAL)"
+    },
+    "FontNumOut":{
+        "prefix": "FontNumOut()",
+        "body": "FontNumOut($1)$0",
+        "description": "char FontNumOut (int x, int y, string filename, variant value, unsigned long options=DRAW_OPT_NORMAL)"
+    },
+    "GraphicOut":{
+        "prefix": "GraphicOut()",
+        "body": "GraphicOut($1)$0",
+        "description": "char GraphicOut (int x, int y, string filename, unsigned long options=DRAW_OPT_NORMAL)"
+    },
+    "GraphicArrayOut":{
+        "prefix": "GraphicArrayOut()",
+        "body": "GraphicArrayOut($1)$0",
+        "description": "char GraphicArrayOut (int x, int y, byte data[ ], unsigned long options=DRAW_OPT_NORMAL)"
+    },
+    "GraphicOutEx":{
+        "prefix": "GraphicOutEx()",
+        "body": "GraphicOutEx($1)$0",
+        "description": "char GraphicOutEx (int x, int y, string filename, byte vars[ ], unsigned long options=DRAW_OPT_NORMAL)"
+    },
+    "GraphicArrayOutEx":{
+        "prefix": "GraphicArrayOutEx()",
+        "body": "GraphicArrayOutEx($1)$0",
+        "description": "char GraphicArrayOutEx (int x, int y, byte data[ ], byte vars[ ], unsigned long options=DRAW_OPT_NORMAL)"
+    },
+    "GetDisplayNormal":{
+        "prefix": "GetDisplayNormal()",
+        "body": "GetDisplayNormal($1)$0",
+        "description": "void GetDisplayNormal (const byte x, const byte line, unsigned int cnt, byte &data[ ])"
+    },
+    "SetDisplayNormal":{
+        "prefix": "SetDisplayNormal()",
+        "body": "SetDisplayNormal($1)$0",
+        "description": "void SetDisplayNormal (const byte x, const byte line, unsigned int cnt, byte data[ ])"
+    },
+    "GetDisplayPopup":{
+        "prefix": "GetDisplayPopup()",
+        "body": "GetDisplayPopup($1)$0",
+        "description": "void GetDisplayPopup (const byte x, const byte line, unsigned int cnt, byte &data[ ])"
+    },
+    "SetDisplayPopup":{
+        "prefix": "SetDisplayPopup()",
+        "body": "SetDisplayPopup($1)$0",
+        "description": "void SetDisplayPopup (const byte x, const byte line, unsigned int cnt, byte data[ ])"
+    },
+    "DisplayEraseMask":{
+        "prefix": "DisplayEraseMask()",
+        "body": "DisplayEraseMask($1)$0",
+        "description": "unsigned long DisplayEraseMask ()"
+    },
+    "DisplayUpdateMask":{
+        "prefix": "DisplayUpdateMask()",
+        "body": "DisplayUpdateMask($1)$0",
+        "description": "unsigned long DisplayUpdateMask ()"
+    },
+    "DisplayFont":{
+        "prefix": "DisplayFont()",
+        "body": "DisplayFont($1)$0",
+        "description": "unsigned long DisplayFont ()"
+    },
+    "DisplayDisplay":{
+        "prefix": "DisplayDisplay()",
+        "body": "DisplayDisplay($1)$0",
+        "description": "unsigned long DisplayDisplay ()"
+    },
+    "DisplayFlags":{
+        "prefix": "DisplayFlags()",
+        "body": "DisplayFlags($1)$0",
+        "description": "byte DisplayFlags ()"
+    },
+    "DisplayTextLinesCenterFlags":{
+        "prefix": "DisplayTextLinesCenterFlags()",
+        "body": "DisplayTextLinesCenterFlags($1)$0",
+        "description": "byte DisplayTextLinesCenterFlags ()"
+    },
+    "SysDrawText":{
+        "prefix": "SysDrawText()",
+        "body": "SysDrawText($1)$0",
+        "description": "void SysDrawText (DrawTextType &args)"
+    },
+    "SysDrawPoint":{
+        "prefix": "SysDrawPoint()",
+        "body": "SysDrawPoint($1)$0",
+        "description": "void SysDrawPoint (DrawPointType &args)"
+    },
+    "SysDrawLine":{
+        "prefix": "SysDrawLine()",
+        "body": "SysDrawLine($1)$0",
+        "description": "void SysDrawLine (DrawLineType &args)"
+    },
+    "SysDrawCircle":{
+        "prefix": "SysDrawCircle()",
+        "body": "SysDrawCircle($1)$0",
+        "description": "void SysDrawCircle (DrawCircleType &args)"
+    },
+    "SysDrawRect":{
+        "prefix": "SysDrawRect()",
+        "body": "SysDrawRect($1)$0",
+        "description": "void SysDrawRect (DrawRectType &args)"
+    },
+    "SysDrawGraphic":{
+        "prefix": "SysDrawGraphic()",
+        "body": "SysDrawGraphic($1)$0",
+        "description": "void SysDrawGraphic (DrawGraphicType &args)"
+    },
+    "SysSetScreenMode":{
+        "prefix": "SysSetScreenMode()",
+        "body": "SysSetScreenMode($1)$0",
+        "description": "void SysSetScreenMode (SetScreenModeType &args)"
+    },
+    "SysDisplayExecuteFunction":{
+        "prefix": "SysDisplayExecuteFunction()",
+        "body": "SysDisplayExecuteFunction($1)$0",
+        "description": "void SysDisplayExecuteFunction (DisplayExecuteFunctionType &args)"
+    },
+    "DisplayContrast":{
+        "prefix": "DisplayContrast()",
+        "body": "DisplayContrast($1)$0",
+        "description": "byte DisplayContrast ()"
+    },
+    "SysDrawGraphicArray":{
+        "prefix": "SysDrawGraphicArray()",
+        "body": "SysDrawGraphicArray($1)$0",
+        "description": "void SysDrawGraphicArray (DrawGraphicArrayType &args)"
+    },
+    "SysDrawPolygon":{
+        "prefix": "SysDrawPolygon()",
+        "body": "SysDrawPolygon($1)$0",
+        "description": "void SysDrawPolygon (DrawPolygonType &args)"
+    },
+    "SysDrawEllipse":{
+        "prefix": "SysDrawEllipse()",
+        "body": "SysDrawEllipse($1)$0",
+        "description": "void SysDrawEllipse (DrawEllipseType &args)"
+    },
+    "SysDrawFont":{
+        "prefix": "SysDrawFont()",
+        "body": "SysDrawFont($1)$0",
+        "description": "void SysDrawFont (DrawFontType &args)"
+    },
+    "ClearScreen":{
+        "prefix": "ClearScreen()",
+        "body": "ClearScreen($1)$0",
+        "description": "void ClearScreen ()"
+    },
+    "ClearLine":{
+        "prefix": "ClearLine()",
+        "body": "ClearLine($1)$0",
+        "description": "void ClearLine (byte line)"
+    },
+    "SetDisplayFont":{
+        "prefix": "SetDisplayFont()",
+        "body": "SetDisplayFont($1)$0",
+        "description": "void SetDisplayFont (unsigned long fontaddr)"
+    },
+    "SetDisplayDisplay":{
+        "prefix": "SetDisplayDisplay()",
+        "body": "SetDisplayDisplay($1)$0",
+        "description": "void SetDisplayDisplay (unsigned long dispaddr)"
+    },
+    "SetDisplayEraseMask":{
+        "prefix": "SetDisplayEraseMask()",
+        "body": "SetDisplayEraseMask($1)$0",
+        "description": "void SetDisplayEraseMask (unsigned long eraseMask)"
+    },
+    "SetDisplayFlags":{
+        "prefix": "SetDisplayFlags()",
+        "body": "SetDisplayFlags($1)$0",
+        "description": "void SetDisplayFlags (byte flags)"
+    },
+    "SetDisplayTextLinesCenterFlags":{
+        "prefix": "SetDisplayTextLinesCenterFlags()",
+        "body": "SetDisplayTextLinesCenterFlags($1)$0",
+        "description": "void SetDisplayTextLinesCenterFlags (byte ctrFlags)"
+    },
+    "SetDisplayUpdateMask":{
+        "prefix": "SetDisplayUpdateMask()",
+        "body": "SetDisplayUpdateMask($1)$0",
+        "description": "void SetDisplayUpdateMask (unsigned long updateMask)"
+    },
+    "SetDisplayContrast":{
+        "prefix": "SetDisplayContrast()",
+        "body": "SetDisplayContrast($1)$0",
+        "description": "void SetDisplayContrast (byte contrast)"
+    },
     "S1":{"prefix":"S1","body":"S1","description":"#define S1 0"},
     "S2":{"prefix":"S2","body":"S2","description":"#define S2 1"},
     "S3":{"prefix":"S3","body":"S3","description":"#define S3 2"},
