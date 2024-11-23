@@ -534,6 +534,317 @@
         "body": "SysInputPinFunction($1)$0",
         "description": "void SysInputPinFunction (InputPinFunctionType &args)"
     },
+    "SetMotorPwnFreq":{
+        "prefix": "SetMotorPwnFreq()",
+        "body": "SetMotorPwnFreq($1)$0",
+        "description": "void SetMotorPwnFreq (byte n)"
+    },
+    "SetMotorRegulationTime":{
+        "prefix": "SetMotorRegulationTime()",
+        "body": "SetMotorRegulationTime($1)$0",
+        "description": "void SetMotorRegulationTime (byte n)"
+    },
+    "SetMotorRegulationOptions":{
+        "prefix": "SetMotorRegulationOptions()",
+        "body": "SetMotorRegulationOptions($1)$0",
+        "description": "void SetMotorRegulationOptions (byte n)"
+    },
+    "OnFwdSyncPID":{
+        "prefix": "OnFwdSyncPID()",
+        "body": "OnFwdSyncPID($1)$0",
+        "description": "void OnFwdSyncPID (byte outputs, char pwr, char turnpct, byte p, byte i, byte d)"
+    },
+    "OnFwdSyncExPID":{
+        "prefix": "OnFwdSyncExPID()",
+        "body": "OnFwdSyncExPID($1)$0",
+        "description": "void OnFwdSyncExPID (byte outputs, char pwr, char turnpct, const byte reset, byte p, byte i, byte d)"
+    },
+    "OnRevSyncPID":{
+        "prefix": "OnRevSyncPID()",
+        "body": "OnRevSyncPID($1)$0",
+        "description": "void OnRevSyncPID (byte outputs, char pwr, char turnpct, byte p, byte i, byte d)"
+    },
+    "OnRevSyncExPID":{
+        "prefix": "OnRevSyncExPID()",
+        "body": "OnRevSyncExPID($1)$0",
+        "description": "void OnRevSyncExPID (byte outputs, char pwr, char turnpct, const byte reset, byte p, byte i, byte d)"
+    },
+    "OnFwdRegPID":{
+        "prefix": "OnFwdRegPID()",
+        "body": "OnFwdRegPID($1)$0",
+        "description": "void OnFwdRegPID (byte outputs, char pwr, byte regmode, byte p, byte i, byte d)"
+    },
+    "OnFwdRegExPID":{
+        "prefix": "OnFwdRegExPID()",
+        "body": "OnFwdRegExPID($1)$0",
+        "description": "void OnFwdRegPID (byte outputs, char pwr, byte regmode, byte p, byte i, byte d)"
+    },
+    "OnRevRegPID":{
+        "prefix": "OnRevRegPID()",
+        "body": "OnRevRegPID($1)$0",
+        "description": "void OnRevRegPID (byte outputs, char pwr, byte regmode, byte p, byte i, byte d)"
+    },
+    "OnRevRegExPID":{
+        "prefix": "OnRevRegExPID()",
+        "body": "OnRevRegExPID($1)$0",
+        "description": "void OnRevRegExPID (byte outputs, char pwr, byte regmode, const byte reset, byte p, byte i, byte d)"
+    },
+    "Off":{
+        "prefix": "Off()",
+        "body": "Off($1)$0",
+        "description": "void Off (byte outputs)"
+    },
+    "OffEx":{
+        "prefix": "OffEx()",
+        "body": "OffEx($1)$0",
+        "description": "void OffEx (byte outputs, const byte reset)"
+    },
+    "Coast":{
+        "prefix": "Coast()",
+        "body": "Coast($1)$0",
+        "description": "void Coast (byte outputs)"
+    },
+    "CoastEx":{
+        "prefix": "CoastEx()",
+        "body": "CoastEx($1)$0",
+        "description": "void CoastEx (byte outputs, const byte reset)"
+    },
+    "Float":{
+        "prefix": "Float()",
+        "body": "Float($1)$0",
+        "description": "void Float (byte outputs)"
+    },
+    "OnFwd":{
+        "prefix": "OnFwd()",
+        "body": "OnFwd($1)$0",
+        "description": "void OnFwd (byte outputs, char pwr)"
+    },
+    "OnFwdEx":{
+        "prefix": "OnFwdEx()",
+        "body": "OnFwdEx($1)$0",
+        "description": "void OnFwdEx (byte outputs, char pwr, const byte reset)"
+    },
+    "OnRev":{
+        "prefix": "OnRev()",
+        "body": "OnRev($1)$0",
+        "description": "void OnRev (byte outputs, char pwr)"
+    },
+    "OnRevEx":{
+        "prefix": "OnRevEx()",
+        "body": "OnRevEx($1)$0",
+        "description": "void OnRevEx (byte outputs, char pwr, const byte reset)"
+    },
+    "OnFwdReg":{
+        "prefix": "OnFwdReg()",
+        "body": "OnFwdReg($1)$0",
+        "description": "void OnFwdReg (byte outputs, char pwr, byte regmode)"
+    },
+    "OnFwdRegEx":{
+        "prefix": "OnFwdRegEx()",
+        "body": "OnFwdRegEx($1)$0",
+        "description": "void OnFwdRegEx (byte outputs, char pwr, byte regmode, const byte reset)"
+    },
+    "OnRevReg":{
+        "prefix": "OnRevReg()",
+        "body": "OnRevReg($1)$0",
+        "description": "void OnRevReg (byte outputs, char pwr, byte regmode)"
+    },
+    "OnRevRegEx":{
+        "prefix": "OnRevRegEx()",
+        "body": "OnRevRegEx($1)$0",
+        "description": "void OnRevRegEx (byte outputs, char pwr, byte regmode, const byte reset)"
+    },
+    "OnFwdSync":{
+        "prefix": "OnFwdSync()",
+        "body": "OnFwdSync($1)$0",
+        "description": "void OnFwdSync (byte outputs, char pwr, char turnpct)"
+    },
+    "OnFwdSyncEx":{
+        "prefix": "OnFwdSyncEx()",
+        "body": "OnFwdSyncEx($1)$0",
+        "description": "void OnFwdSyncEx (byte outputs, char pwr, char turnpct, const byte reset)"
+    },
+    "OnRevSync":{
+        "prefix": "OnRevSync()",
+        "body": "OnRevSync($1)$0",
+        "description": "void OnRevSync (byte outputs, char pwr, char turnpct)"
+    },
+    "OnRevSyncEx":{
+        "prefix": "OnRevSyncEx()",
+        "body": "OnRevSyncEx($1)$0",
+        "description": "void OnRevSyncEx (byte outputs, char pwr, char turnpct, const byte reset)"
+    },
+    "RotateMotor":{
+        "prefix": "RotateMotor()",
+        "body": "RotateMotor($1)$0",
+        "description": "void RotateMotor (byte outputs, char pwr, long angle)"
+    },
+    "RotateMotorPID":{
+        "prefix": "RotateMotorPID()",
+        "body": "RotateMotorPID($1)$0",
+        "description": "void RotateMotorPID (byte outputs, char pwr, long angle, byte p, byte i, byte d)"
+    },
+    "RotateMotorEx":{
+        "prefix": "RotateMotorEx()",
+        "body": "RotateMotorEx($1)$0",
+        "description": "void RotateMotorEx (byte outputs, char pwr, long angle, char turnpct, bool sync, bool stop)"
+    },
+    "RotateMotorExPID":{
+        "prefix": "RotateMotorExPID()",
+        "body": "RotateMotorExPID($1)$0",
+        "description": "void RotateMotorExPID (byte outputs, char pwr, long angle, char turnpct, bool sync, bool stop, byte p, byte i, byte d)"
+    },
+    "ResetTachoCount":{
+        "prefix": "ResetTachoCount()",
+        "body": "ResetTachoCount($1)$0",
+        "description": "void ResetTachoCount (byte outputs)"
+    },
+    "ResetBlockTachoCount":{
+        "prefix": "ResetBlockTachoCount()",
+        "body": "ResetBlockTachoCount($1)$0",
+        "description": "void ResetBlockTachoCount (byte outputs)"
+    },
+    "ResetRotationCount":{
+        "prefix": "ResetRotationCount()",
+        "body": "ResetRotationCount($1)$0",
+        "description": "void ResetRotationCount (byte outputs)"
+    },
+    "ResetAllTachoCount":{
+        "prefix": "ResetAllTachoCount()",
+        "body": "ResetAllTachoCount($1)$0",
+        "description": "void ResetAllTachoCounts (byte outputs)"
+    },
+    "SetOutput":{
+        "prefix": "SetOutput()",
+        "body": "SetOutput($1)$0",
+        "description": "void SetOutput (byte outputs, byte field1, variant val1,..., byte fieldN, variant valN)"
+    },
+    "GetOutput":{
+        "prefix": "GetOutput()",
+        "body": "GetOutput($1)$0",
+        "description": "variant GetOutput (byte output, const byte field)"
+    },
+    "MotorMode":{
+        "prefix": "MotorMode()",
+        "body": "MotorMode($1)$0",
+        "description": "byte MotorMode (byte output)"
+    },
+    "MotorPower":{
+        "prefix": "MotorPower()",
+        "body": "MotorPower($1)$0",
+        "description": "char MotorPower (byte output)"
+    },
+    "MotorActualSpeed":{
+        "prefix": "MotorActualSpeed()",
+        "body": "MotorActualSpeed($1)$0",
+        "description": "char MotorActualSpeed (byte output)"
+    },
+    "MotorTachoCount":{
+        "prefix": "MotorTachoCount()",
+        "body": "MotorTachoCount($1)$0",
+        "description": "long MotorTachoCount (byte output)"
+    },
+    "MotorTachoLimit":{
+        "prefix": "MotorTachoLimit()",
+        "body": "MotorTachoLimit($1)$0",
+        "description": "long MotorTachoLimit (byte output)"
+    },
+    "MotorRunState":{
+        "prefix": "MotorRunState()",
+        "body": "MotorRunState($1)$0",
+        "description": "byte MotorRunState (byte output)"
+    },
+    "MotorTurnRatio":{
+        "prefix": "MotorTurnRatio()",
+        "body": "MotorTurnRatio($1)$0",
+        "description": "char MotorTurnRatio (byte output)"
+    },
+    "MotorRegulation":{
+        "prefix": "MotorRegulation()",
+        "body": "MotorRegulation($1)$0",
+        "description": "byte MotorRegulation (byte output)"
+    },
+    "MotorOverload":{
+        "prefix": "MotorOverload()",
+        "body": "MotorOverload($1)$0",
+        "description": "bool MotorOverload (byte output)"
+    },
+    "MotorRegPValue":{
+        "prefix": "MotorRegPValue()",
+        "body": "MotorRegPValue($1)$0",
+        "description": "byte MotorRegPValue (byte output)"
+    },
+    "MotorRegIValue":{
+        "prefix": "MotorRegIValue()",
+        "body": "MotorRegIValue($1)$0",
+        "description": "byte MotorRegIValue (byte output)"
+    },
+    "MotorRegDValue":{
+        "prefix": "MotorRegDValue()",
+        "body": "MotorRegDValue($1)$0",
+        "description": "byte MotorRegDValue (byte output)"
+    },
+    "MotorBlockTachoCount":{
+        "prefix": "MotorBlockTachoCount()",
+        "body": "MotorBlockTachoCount($1)$0",
+        "description": "long MotorBlockTachoCount (byte output)"
+    },
+    "MotorRotationCount":{
+        "prefix": "MotorRotationCount()",
+        "body": "MotorRotationCount($1)$0",
+        "description": "long MotorRotationCount (byte output)"
+    },
+    "MotorOutputOptions":{
+        "prefix": "MotorOutputOptions()",
+        "body": "MotorOutputOptions($1)$0",
+        "description": "byte MotorOutputOptions (byte output)"
+    },
+    "MotorMaxSpeed":{
+        "prefix": "MotorMaxSpeed()",
+        "body": "MotorMaxSpeed($1)$0",
+        "description": "byte MotorMaxSpeed (byte output)"
+    },
+    "MotorMaxAcceleration":{
+        "prefix": "MotorMaxAcceleration()",
+        "body": "MotorMaxAcceleration($1)$0",
+        "description": "byte MotorMaxAcceleration (byte output)"
+    },
+    "MotorPwnFreq":{
+        "prefix": "MotorPwnFreq()",
+        "body": "MotorPwnFreq($1)$0",
+        "description": "byte MotorPwnFreq ()"
+    },
+    "MotorRegulationTime":{
+        "prefix": "MotorRegulationTime()",
+        "body": "MotorRegulationTime($1)$0",
+        "description": "byte MotorRegulationTime ()"
+    },
+    "MotorRegulationOptions":{
+        "prefix": "MotorRegulationOptions()",
+        "body": "MotorRegulationOptions($1)$0",
+        "description": "byte MotorRegulationOptions ()"
+    },
+    "PosRegEnable":{
+        "prefix": "PosRegEnable()",
+        "body": "PosRegEnable($1)$0",
+        "description": "void PosRegEnable (byte output, byte p=PID_3, byte i=PID_1, byte d=PID_1)"
+    },
+    "PosRegSetAngle":{
+        "prefix": "PosRegSetAngle()",
+        "body": "PosRegSetAngle($1)$0",
+        "description": "void PosRegSetAngle (byte output, long angle)"
+    },
+    "PosRegAddAngle":{
+        "prefix": "PosRegAddAngle()",
+        "body": "PosRegAddAngle($1)$0",
+        "description": "void PosRegAddAngle (byte output, long angle_add)"
+    },
+    "PosRegSetMax":{
+        "prefix": "PosRegSetMax()",
+        "body": "PosRegSetMax($1)$0",
+        "description": "void PosRegSetMax (byte output, byte max_speed, byte max_acceleration)"
+    },
+
     "ResetScreen":{
         "prefix": "ResetScreen()",
         "body": "ResetScreen",
