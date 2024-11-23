@@ -844,7 +844,6 @@
         "body": "PosRegSetMax($1)$0",
         "description": "void PosRegSetMax (byte output, byte max_speed, byte max_acceleration)"
     },
-
     "ResetScreen":{
         "prefix": "ResetScreen()",
         "body": "ResetScreen",
@@ -1080,6 +1079,131 @@
         "body": "SetDisplayContrast($1)$0",
         "description": "void SetDisplayContrast (byte contrast)"
     },
+    "PlayFile":{
+        "prefix": "PlayFile()",
+        "body": "PlayFile($1)$0",
+        "description": "char PlayFile (string filename)"
+    },
+    "PlayFileEx":{
+        "prefix": "PlayFileEx()",
+        "body": "PlayFileEx($1)$0",
+        "description": "char PlayFileEx (string filename, byte volume, bool loop)"
+    },
+    "PlayTone":{
+        "prefix": "PlayTone()",
+        "body": "PlayTone($1)$0",
+        "description": "char PlayTone (unsigned int frequency, unsigned int duration)"
+    },
+    "PlayToneEx":{
+        "prefix": "PlayToneEx()",
+        "body": "PlayToneEx($1)$0",
+        "description": "char PlayToneEx (unsigned int frequency, unsigned int duration, byte volume, bool loop)"
+    },
+    "SoundState":{
+        "prefix": "SoundState()",
+        "body": "SoundState($1)$0",
+        "description": "byte SoundState ()"
+    },
+    "SoundFlags":{
+        "prefix": "SoundFlags()",
+        "body": "SoundFlags($1)$0",
+        "description": "byte SoundFlags ()"
+    },
+    "StopSound":{
+        "prefix": "StopSound()",
+        "body": "StopSound($1)$0",
+        "description": "byte StopSound ()"
+    },
+    "SoundFrequency":{
+        "prefix": "SoundFrequency()",
+        "body": "SoundFrequency($1)$0",
+        "description": "unsigned int SoundFrequency ()"
+    },
+    "SoundDuration":{
+        "prefix": "SoundDuration()",
+        "body": "SoundDuration($1)$0",
+        "description": "unsigned int SoundDuration ()"
+    },
+    "SoundSampleRate":{
+        "prefix": "SoundSampleRate()",
+        "body": "SoundSampleRate($1)$0",
+        "description": "unsigned int SoundSampleRate ()"
+    },
+    "SoundMode":{
+        "prefix": "SoundMode()",
+        "body": "SoundMode($1)$0",
+        "description": "byte SoundMode ()"
+    },
+    "SoundVolume":{
+        "prefix": "SoundVolume()",
+        "body": "SoundVolume($1)$0",
+        "description": "byte SoundVolume ()"
+    },
+    "SetSoundDuration":{
+        "prefix": "SetSoundDuration()",
+        "body": "SetSoundDuration($1)$0",
+        "description": "void SetSoundDuration (unsigned int duration)"
+    },
+    "SetSoundFlags":{
+        "prefix": "SetSoundFlags()",
+        "body": "SetSoundFlags($1)$0",
+        "description": "void SetSoundFlags (byte flags)"
+    },
+    "SetSoundFrequency":{
+        "prefix": "SetSoundFrequency()",
+        "body": "SetSoundFrequency($1)$0",
+        "description": "void SetSoundFrequency (unsigned int frequency)"
+    },
+    "SetSoundMode":{
+        "prefix": "SetSoundMode()",
+        "body": "SetSoundMode($1)$0",
+        "description": "void SetSoundMode (byte mode)"
+    },
+    "SetSoundModuleState":{
+        "prefix": "SetSoundModuleState()",
+        "body": "SetSoundModuleState($1)$0",
+        "description": "void SetSoundModuleState (byte state)"
+    },
+    "SetSoundSampleRate":{
+        "prefix": "SetSoundSampleRate()",
+        "body": "SetSoundSampleRate($1)$0",
+        "description": "void SetSoundSampleRate (unsigned int sampleRate)"
+    },
+    "SetSoundVolume":{
+        "prefix": "SetSoundVolume()",
+        "body": "SetSoundVolume($1)$0",
+        "description": "void SetSoundVolume (byte volume)"
+    },
+    "SysSoundPlayFile":{
+        "prefix": "SysSoundPlayFile()",
+        "body": "SysSoundPlayFile($1)$0",
+        "description": "void SysSoundPlayFile (SoundPlayFileType &args)"
+    },
+    "SysSoundPlayTone":{
+        "prefix": "SysSoundPlayTone()",
+        "body": "SysSoundPlayTone($1)$0",
+        "description": "void SysSoundPlayTone (SoundPlayToneType &args)"
+    },
+    "SoundGetState":{
+        "prefix": "SoundGetState()",
+        "body": "SoundGetState($1)$0",
+        "description": "void SysSoundGetState (SoundGetStateType &args)"
+    },
+    "SysSoundSetState":{
+        "prefix": "SysSoundSetState()",
+        "body": "SysSoundSetState($1)$0",
+        "description": "void SysSoundSetState (SoundSetStateType &args)"
+    },
+    "PlaySound":{
+        "prefix": "PlaySound()",
+        "body": "PlaySound($1)$0",
+        "description": "void PlaySound (const int &aCode)"
+    },
+    "PlayTones":{
+        "prefix": "PlayTones()",
+        "body": "PlayTones($1)$0",
+        "description": "void PlayTones (Tone tones[])"
+    },    
     "S1":{"prefix":"S1","body":"S1","description":"#define S1 0"},
     "S2":{"prefix":"S2","body":"S2","description":"#define S2 1"},
     "S3":{"prefix":"S3","body":"S3","description":"#define S3 2"},
