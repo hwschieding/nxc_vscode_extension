@@ -25,10 +25,11 @@ def automatic_entries():
     with open("dev_scripts/doc_input.txt", "r") as input_f, open("dev_scripts/snippet_writer_output.txt", "a") as output_f:
         input_lines = input_f.readlines()
         for line in input_lines:
+            line = line.strip(" ")
             if line[0] == "â":
                 line_words = line.split(" ")
                 line_words.pop(0)
-                make_entry(output_f, line_words[1], ' '.join(line_words).strip("\n"))
+                make_entry(output_f, line_words[1], ' '.join(line_words).strip("\n "))
 
 if __name__ == "__main__":
     automatic_entries()

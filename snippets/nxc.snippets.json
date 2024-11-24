@@ -1849,6 +1849,861 @@
         "body":"RebootInFirmwareMode($1)$0",
         "description":"void RebootInFirmwareMode ()"
     },
+    "JoystickMessageRead":{
+        "prefix": "JoystickMessageRead()",
+        "body": "JoystickMessageRead($1)$0",
+        "description": "char JoystickMessageRead (byte queue, JoystickMessageType &msg)"
+    },
+    "SendMessage":{
+        "prefix": "SendMessage()",
+        "body": "SendMessage($1)$0",
+        "description": "char SendMessage (byte queue, string msg)"
+    },
+    "ReceiveMessage":{
+        "prefix": "ReceiveMessage()",
+        "body": "ReceiveMessage($1)$0",
+        "description": "char ReceiveMessage (byte queue, bool clear, string &msg)"
+    },
+    "BluetoothStatus":{
+        "prefix": "BluetoothStatus()",
+        "body": "BluetoothStatus($1)$0",
+        "description": "char BluetoothStatus (byte conn)"
+    },
+    "BluetoothWrite":{
+        "prefix": "BluetoothWrite()",
+        "body": "BluetoothWrite($1)$0",
+        "description": "char BluetoothWrite (byte conn, byte buffer[])"
+    },
+    "RemoteConnectionWrite":{
+        "prefix": "RemoteConnectionWrite()",
+        "body": "RemoteConnectionWrite($1)$0",
+        "description": "char RemoteConnectionWrite (byte conn, byte buffer[])"
+    },
+    "RemoteConnectionIdle":{
+        "prefix": "RemoteConnectionIdle()",
+        "body": "RemoteConnectionIdle($1)$0",
+        "description": "bool RemoteConnectionIdle (byte conn)"
+    },
+    "SendRemoteBool":{
+        "prefix": "SendRemoteBool()",
+        "body": "SendRemoteBool($1)$0",
+        "description": "char SendRemoteBool (byte conn, byte queue, bool bval)"
+    },
+    "SendRemoteNumber":{
+        "prefix": "SendRemoteNumber()",
+        "body": "SendRemoteNumber($1)$0",
+        "description": "char SendRemoteNumber (byte conn, byte queue, long val)"
+    },
+    "SendRemoteString":{
+        "prefix": "SendRemoteString()",
+        "body": "SendRemoteString($1)$0",
+        "description": "char SendRemoteString (byte conn, byte queue, string str)"
+    },
+    "SendResponseBool":{
+        "prefix": "SendResponseBool()",
+        "body": "SendResponseBool($1)$0",
+        "description": "char SendResponseBool (byte queue, bool bval)"
+    },
+    "SendResponseNumber":{
+        "prefix": "SendResponseNumber()",
+        "body": "SendResponseNumber($1)$0",
+        "description": "char SendResponseNumber (byte queue, long val)"
+    },
+    "SendResponseString":{
+        "prefix": "SendResponseString()",
+        "body": "SendResponseString($1)$0",
+        "description": "char SendResponseString (byte queue, string str)"
+    },
+    "ReceiveRemoteBool":{
+        "prefix": "ReceiveRemoteBool()",
+        "body": "ReceiveRemoteBool($1)$0",
+        "description": "char ReceiveRemoteBool (byte queue, bool clear, bool &bval)"
+    },
+    "ReceiveRemoteMessageEx":{
+        "prefix": "ReceiveRemoteMessageEx()",
+        "body": "ReceiveRemoteMessageEx($1)$0",
+        "description": "char ReceiveRemoteMessageEx (byte queue, bool clear, string &str, long &val,"
+    },
+    "ReceiveRemoteNumber":{
+        "prefix": "ReceiveRemoteNumber()",
+        "body": "ReceiveRemoteNumber($1)$0",
+        "description": "char ReceiveRemoteNumber (byte queue, bool clear, long &val)"
+    },
+    "ReceiveRemoteString":{
+        "prefix": "ReceiveRemoteString()",
+        "body": "ReceiveRemoteString($1)$0",
+        "description": "char ReceiveRemoteString (byte queue, bool clear, string &str)"
+    },
+    "UseRS485":{
+        "prefix": "UseRS485()",
+        "body": "UseRS485($1)$0",
+        "description": "void UseRS485 (void)"
+    },
+    "RS485Control":{
+        "prefix": "RS485Control()",
+        "body": "RS485Control($1)$0",
+        "description": "char RS485Control (byte cmd, byte baud, unsigned int mode)"
+    },
+    "RS485DataAvailable":{
+        "prefix": "RS485DataAvailable()",
+        "body": "RS485DataAvailable($1)$0",
+        "description": "byte RS485DataAvailable (void)"
+    },
+    "RS485Initialize":{
+        "prefix": "RS485Initialize()",
+        "body": "RS485Initialize($1)$0",
+        "description": "char RS485Initialize (void)"
+    },
+    "RS485Disable":{
+        "prefix": "RS485Disable()",
+        "body": "RS485Disable($1)$0",
+        "description": "char RS485Disable (void)"
+    },
+    "RS485Enable":{
+        "prefix": "RS485Enable()",
+        "body": "RS485Enable($1)$0",
+        "description": "char RS485Enable (void)"
+    },
+    "RS485Read":{
+        "prefix": "RS485Read()",
+        "body": "RS485Read($1)$0",
+        "description": "char RS485Read (byte &buffer[])"
+    },
+    "RS485ReadEx":{
+        "prefix": "RS485ReadEx()",
+        "body": "RS485ReadEx($1)$0",
+        "description": "char RS485ReadEx (byte &buffer[], byte buflen)"
+    },
+    "RS485SendingData":{
+        "prefix": "RS485SendingData()",
+        "body": "RS485SendingData($1)$0",
+        "description": "byte RS485SendingData (void)"
+    },
+    "RS485Status":{
+        "prefix": "RS485Status()",
+        "body": "RS485Status($1)$0",
+        "description": "void RS485Status (byte &sendingData, byte &dataAvail)"
+    },
+    "RS485Uart":{
+        "prefix": "RS485Uart()",
+        "body": "RS485Uart($1)$0",
+        "description": "char RS485Uart (byte baud, unsigned int mode)"
+    },
+    "RS485Write":{
+        "prefix": "RS485Write()",
+        "body": "RS485Write($1)$0",
+        "description": "char RS485Write (byte buffer[])"
+    },
+    "SendRS485Bool":{
+        "prefix": "SendRS485Bool()",
+        "body": "SendRS485Bool($1)$0",
+        "description": "char SendRS485Bool (bool bval)"
+    },
+    "SendRS485Number":{
+        "prefix": "SendRS485Number()",
+        "body": "SendRS485Number($1)$0",
+        "description": "char SendRS485Number (long val)"
+    },
+    "SendRS485String":{
+        "prefix": "SendRS485String()",
+        "body": "SendRS485String($1)$0",
+        "description": "char SendRS485String (string str)"
+    },
+    "GetBTInputBuffer":{
+        "prefix": "GetBTInputBuffer()",
+        "body": "GetBTInputBuffer($1)$0",
+        "description": "void GetBTInputBuffer (const byte offset, byte cnt, byte &data[])"
+    },
+    "GetBTOutputBuffer":{
+        "prefix": "GetBTOutputBuffer()",
+        "body": "GetBTOutputBuffer($1)$0",
+        "description": "void GetBTOutputBuffer (const byte offset, byte cnt, byte &data[])"
+    },
+    "GetHSInputBuffer":{
+        "prefix": "GetHSInputBuffer()",
+        "body": "GetHSInputBuffer($1)$0",
+        "description": "void GetHSInputBuffer (const byte offset, byte cnt, byte &data[])"
+    },
+    "GetHSOutputBuffer":{
+        "prefix": "GetHSOutputBuffer()",
+        "body": "GetHSOutputBuffer($1)$0",
+        "description": "void GetHSOutputBuffer (const byte offset, byte cnt, byte &data[])"
+    },
+    "GetUSBInputBuffer":{
+        "prefix": "GetUSBInputBuffer()",
+        "body": "GetUSBInputBuffer($1)$0",
+        "description": "void GetUSBInputBuffer (const byte offset, byte cnt, byte &data[])"
+    },
+    "GetUSBOutputBuffer":{
+        "prefix": "GetUSBOutputBuffer()",
+        "body": "GetUSBOutputBuffer($1)$0",
+        "description": "void GetUSBOutputBuffer (const byte offset, byte cnt, byte &data[])"
+    },
+    "GetUSBPollBuffer":{
+        "prefix": "GetUSBPollBuffer()",
+        "body": "GetUSBPollBuffer($1)$0",
+        "description": "void GetUSBPollBuffer (const byte offset, byte cnt, byte &data[])"
+    },
+    "BTDeviceName":{
+        "prefix": "BTDeviceName()",
+        "body": "BTDeviceName($1)$0",
+        "description": "string BTDeviceName (const byte devidx)"
+    },
+    "BTConnectionName":{
+        "prefix": "BTConnectionName()",
+        "body": "BTConnectionName($1)$0",
+        "description": "string BTConnectionName (const byte conn)"
+    },
+    "BTConnectionPinCode":{
+        "prefix": "BTConnectionPinCode()",
+        "body": "BTConnectionPinCode($1)$0",
+        "description": "string BTConnectionPinCode (const byte conn)"
+    },
+    "BrickDataName":{
+        "prefix": "BrickDataName()",
+        "body": "BrickDataName($1)$0",
+        "description": "string BrickDataName (void)"
+    },
+    "GetBTDeviceAddress":{
+        "prefix": "GetBTDeviceAddress()",
+        "body": "GetBTDeviceAddress($1)$0",
+        "description": "void GetBTDeviceAddress (const byte devidx, byte &data[])"
+    },
+    "GetBTConnectionAddress":{
+        "prefix": "GetBTConnectionAddress()",
+        "body": "GetBTConnectionAddress($1)$0",
+        "description": "void GetBTConnectionAddress (const byte conn, byte &data[])"
+    },
+    "GetBrickDataAddress":{
+        "prefix": "GetBrickDataAddress()",
+        "body": "GetBrickDataAddress($1)$0",
+        "description": "void GetBrickDataAddress (byte &data[])"
+    },
+    "BTDeviceClass":{
+        "prefix": "BTDeviceClass()",
+        "body": "BTDeviceClass($1)$0",
+        "description": "long BTDeviceClass (const byte devidx)"
+    },
+    "BTDeviceStatus":{
+        "prefix": "BTDeviceStatus()",
+        "body": "BTDeviceStatus($1)$0",
+        "description": "byte BTDeviceStatus (const byte devidx)"
+    },
+    "BTConnectionClass":{
+        "prefix": "BTConnectionClass()",
+        "body": "BTConnectionClass($1)$0",
+        "description": "long BTConnectionClass (const byte conn)"
+    },
+    "BTConnectionHandleNum":{
+        "prefix": "BTConnectionHandleNum()",
+        "body": "BTConnectionHandleNum($1)$0",
+        "description": "byte BTConnectionHandleNum (const byte conn)"
+    },
+    "BTConnectionStreamStatus":{
+        "prefix": "BTConnectionStreamStatus()",
+        "body": "BTConnectionStreamStatus($1)$0",
+        "description": "byte BTConnectionStreamStatus (const byte conn)"
+    },
+    "BTConnectionLinkQuality":{
+        "prefix": "BTConnectionLinkQuality()",
+        "body": "BTConnectionLinkQuality($1)$0",
+        "description": "byte BTConnectionLinkQuality (const byte conn)"
+    },
+    "BrickDataBluecoreVersion":{
+        "prefix": "BrickDataBluecoreVersion()",
+        "body": "BrickDataBluecoreVersion($1)$0",
+        "description": "int BrickDataBluecoreVersion (void)"
+    },
+    "BrickDataBtStateStatus":{
+        "prefix": "BrickDataBtStateStatus()",
+        "body": "BrickDataBtStateStatus($1)$0",
+        "description": "byte BrickDataBtStateStatus (void)"
+    },
+    "BrickDataBtHardwareStatus":{
+        "prefix": "BrickDataBtHardwareStatus()",
+        "body": "BrickDataBtHardwareStatus($1)$0",
+        "description": "byte BrickDataBtHardwareStatus (void)"
+    },
+    "BrickDataTimeoutValue":{
+        "prefix": "BrickDataTimeoutValue()",
+        "body": "BrickDataTimeoutValue($1)$0",
+        "description": "byte BrickDataTimeoutValue (void)"
+    },
+    "BTInputBufferInPtr":{
+        "prefix": "BTInputBufferInPtr()",
+        "body": "BTInputBufferInPtr($1)$0",
+        "description": "byte BTInputBufferInPtr (void)"
+    },
+    "BTInputBufferOutPtr":{
+        "prefix": "BTInputBufferOutPtr()",
+        "body": "BTInputBufferOutPtr($1)$0",
+        "description": "byte BTInputBufferOutPtr (void)"
+    },
+    "BTOutputBufferInPtr":{
+        "prefix": "BTOutputBufferInPtr()",
+        "body": "BTOutputBufferInPtr($1)$0",
+        "description": "byte BTOutputBufferInPtr (void)"
+    },
+    "BTOutputBufferOutPtr":{
+        "prefix": "BTOutputBufferOutPtr()",
+        "body": "BTOutputBufferOutPtr($1)$0",
+        "description": "byte BTOutputBufferOutPtr (void)"
+    },
+    "HSInputBufferInPtr":{
+        "prefix": "HSInputBufferInPtr()",
+        "body": "HSInputBufferInPtr($1)$0",
+        "description": "byte HSInputBufferInPtr (void)"
+    },
+    "HSInputBufferOutPtr":{
+        "prefix": "HSInputBufferOutPtr()",
+        "body": "HSInputBufferOutPtr($1)$0",
+        "description": "byte HSInputBufferOutPtr (void)"
+    },
+    "HSOutputBufferInPtr":{
+        "prefix": "HSOutputBufferInPtr()",
+        "body": "HSOutputBufferInPtr($1)$0",
+        "description": "byte HSOutputBufferInPtr (void)"
+    },
+    "HSOutputBufferOutPtr":{
+        "prefix": "HSOutputBufferOutPtr()",
+        "body": "HSOutputBufferOutPtr($1)$0",
+        "description": "byte HSOutputBufferOutPtr (void)"
+    },
+    "USBInputBufferInPtr":{
+        "prefix": "USBInputBufferInPtr()",
+        "body": "USBInputBufferInPtr($1)$0",
+        "description": "byte USBInputBufferInPtr (void)"
+    },
+    "USBInputBufferOutPtr":{
+        "prefix": "USBInputBufferOutPtr()",
+        "body": "USBInputBufferOutPtr($1)$0",
+        "description": "byte USBInputBufferOutPtr (void)"
+    },
+    "USBOutputBufferInPtr":{
+        "prefix": "USBOutputBufferInPtr()",
+        "body": "USBOutputBufferInPtr($1)$0",
+        "description": "byte USBOutputBufferInPtr (void)"
+    },
+    "USBOutputBufferOutPtr":{
+        "prefix": "USBOutputBufferOutPtr()",
+        "body": "USBOutputBufferOutPtr($1)$0",
+        "description": "byte USBOutputBufferOutPtr (void)"
+    },
+    "USBPollBufferInPtr":{
+        "prefix": "USBPollBufferInPtr()",
+        "body": "USBPollBufferInPtr($1)$0",
+        "description": "byte USBPollBufferInPtr (void)"
+    },
+    "USBPollBufferOutPtr":{
+        "prefix": "USBPollBufferOutPtr()",
+        "body": "USBPollBufferOutPtr($1)$0",
+        "description": "byte USBPollBufferOutPtr (void)"
+    },
+    "BTDeviceCount":{
+        "prefix": "BTDeviceCount()",
+        "body": "BTDeviceCount($1)$0",
+        "description": "byte BTDeviceCount (void)"
+    },
+    "BTDeviceNameCount":{
+        "prefix": "BTDeviceNameCount()",
+        "body": "BTDeviceNameCount($1)$0",
+        "description": "byte BTDeviceNameCount (void)"
+    },
+    "HSFlags":{
+        "prefix": "HSFlags()",
+        "body": "HSFlags($1)$0",
+        "description": "byte HSFlags (void)"
+    },
+    "HSSpeed":{
+        "prefix": "HSSpeed()",
+        "body": "HSSpeed($1)$0",
+        "description": "byte HSSpeed (void)"
+    },
+    "HSState":{
+        "prefix": "HSState()",
+        "body": "HSState($1)$0",
+        "description": "byte HSState (void)"
+    },
+    "HSAddress":{
+        "prefix": "HSAddress()",
+        "body": "HSAddress($1)$0",
+        "description": "byte HSAddress (void)"
+    },
+    "HSMode":{
+        "prefix": "HSMode()",
+        "body": "HSMode($1)$0",
+        "description": "int HSMode (void)"
+    },
+    "BTDataMode":{
+        "prefix": "BTDataMode()",
+        "body": "BTDataMode($1)$0",
+        "description": "int BTDataMode (void)"
+    },
+    "HSDataMode":{
+        "prefix": "HSDataMode()",
+        "body": "HSDataMode($1)$0",
+        "description": "int HSDataMode (void)"
+    },
+    "USBState":{
+        "prefix": "USBState()",
+        "body": "USBState($1)$0",
+        "description": "byte USBState (void)"
+    },
+    "SetBTInputBuffer":{
+        "prefix": "SetBTInputBuffer()",
+        "body": "SetBTInputBuffer($1)$0",
+        "description": "void SetBTInputBuffer (const byte offset, byte cnt, byte data[])"
+    },
+    "SetBTInputBufferInPtr":{
+        "prefix": "SetBTInputBufferInPtr()",
+        "body": "SetBTInputBufferInPtr($1)$0",
+        "description": "void SetBTInputBufferInPtr (byte n)"
+    },
+    "SetBTInputBufferOutPtr":{
+        "prefix": "SetBTInputBufferOutPtr()",
+        "body": "SetBTInputBufferOutPtr($1)$0",
+        "description": "void SetBTInputBufferOutPtr (byte n)"
+    },
+    "SetBTOutputBuffer":{
+        "prefix": "SetBTOutputBuffer()",
+        "body": "SetBTOutputBuffer($1)$0",
+        "description": "void SetBTOutputBuffer (const byte offset, byte cnt, byte data[])"
+    },
+    "SetBTOutputBufferInPtr":{
+        "prefix": "SetBTOutputBufferInPtr()",
+        "body": "SetBTOutputBufferInPtr($1)$0",
+        "description": "void SetBTOutputBufferInPtr (byte n)"
+    },
+    "SetBTOutputBufferOutPtr":{
+        "prefix": "SetBTOutputBufferOutPtr()",
+        "body": "SetBTOutputBufferOutPtr($1)$0",
+        "description": "void SetBTOutputBufferOutPtr (byte n)"
+    },
+    "SetHSInputBuffer":{
+        "prefix": "SetHSInputBuffer()",
+        "body": "SetHSInputBuffer($1)$0",
+        "description": "void SetHSInputBuffer (const byte offset, byte cnt, byte data[])"
+    },
+    "SetHSInputBufferInPtr":{
+        "prefix": "SetHSInputBufferInPtr()",
+        "body": "SetHSInputBufferInPtr($1)$0",
+        "description": "void SetHSInputBufferInPtr (byte n)"
+    },
+    "SetHSInputBufferOutPtr":{
+        "prefix": "SetHSInputBufferOutPtr()",
+        "body": "SetHSInputBufferOutPtr($1)$0",
+        "description": "void SetHSInputBufferOutPtr (byte n)"
+    },
+    "SetHSOutputBuffer":{
+        "prefix": "SetHSOutputBuffer()",
+        "body": "SetHSOutputBuffer($1)$0",
+        "description": "void SetHSOutputBuffer (const byte offset, byte cnt, byte data[])"
+    },
+    "SetHSOutputBufferInPtr":{
+        "prefix": "SetHSOutputBufferInPtr()",
+        "body": "SetHSOutputBufferInPtr($1)$0",
+        "description": "void SetHSOutputBufferInPtr (byte n)"
+    },
+    "SetHSOutputBufferOutPtr":{
+        "prefix": "SetHSOutputBufferOutPtr()",
+        "body": "SetHSOutputBufferOutPtr($1)$0",
+        "description": "void SetHSOutputBufferOutPtr (byte n)"
+    },
+    "SetUSBInputBuffer":{
+        "prefix": "SetUSBInputBuffer()",
+        "body": "SetUSBInputBuffer($1)$0",
+        "description": "void SetUSBInputBuffer (const byte offset, byte cnt, byte data[])"
+    },
+    "SetUSBInputBufferInPtr":{
+        "prefix": "SetUSBInputBufferInPtr()",
+        "body": "SetUSBInputBufferInPtr($1)$0",
+        "description": "void SetUSBInputBufferInPtr (byte n)"
+    },
+    "SetUSBInputBufferOutPtr":{
+        "prefix": "SetUSBInputBufferOutPtr()",
+        "body": "SetUSBInputBufferOutPtr($1)$0",
+        "description": "void SetUSBInputBufferOutPtr (byte n)"
+    },
+    "SetUSBOutputBuffer":{
+        "prefix": "SetUSBOutputBuffer()",
+        "body": "SetUSBOutputBuffer($1)$0",
+        "description": "void SetUSBOutputBuffer (const byte offset, byte cnt, byte data[])"
+    },
+    "SetUSBOutputBufferInPtr":{
+        "prefix": "SetUSBOutputBufferInPtr()",
+        "body": "SetUSBOutputBufferInPtr($1)$0",
+        "description": "void SetUSBOutputBufferInPtr (byte n)"
+    },
+    "SetUSBOutputBufferOutPtr":{
+        "prefix": "SetUSBOutputBufferOutPtr()",
+        "body": "SetUSBOutputBufferOutPtr($1)$0",
+        "description": "void SetUSBOutputBufferOutPtr (byte n)"
+    },
+    "SetUSBPollBuffer":{
+        "prefix": "SetUSBPollBuffer()",
+        "body": "SetUSBPollBuffer($1)$0",
+        "description": "void SetUSBPollBuffer (const byte offset, byte cnt, byte data[])"
+    },
+    "SetUSBPollBufferInPtr":{
+        "prefix": "SetUSBPollBufferInPtr()",
+        "body": "SetUSBPollBufferInPtr($1)$0",
+        "description": "void SetUSBPollBufferInPtr (byte n)"
+    },
+    "SetUSBPollBufferOutPtr":{
+        "prefix": "SetUSBPollBufferOutPtr()",
+        "body": "SetUSBPollBufferOutPtr($1)$0",
+        "description": "void SetUSBPollBufferOutPtr (byte n)"
+    },
+    "SetHSFlags":{
+        "prefix": "SetHSFlags()",
+        "body": "SetHSFlags($1)$0",
+        "description": "void SetHSFlags (byte hsFlags)"
+    },
+    "SetHSSpeed":{
+        "prefix": "SetHSSpeed()",
+        "body": "SetHSSpeed($1)$0",
+        "description": "void SetHSSpeed (byte hsSpeed)"
+    },
+    "SetHSState":{
+        "prefix": "SetHSState()",
+        "body": "SetHSState($1)$0",
+        "description": "void SetHSState (byte hsState)"
+    },
+    "SetHSAddress":{
+        "prefix": "SetHSAddress()",
+        "body": "SetHSAddress($1)$0",
+        "description": "void SetHSAddress (byte hsAddress)"
+    },
+    "SetHSMode":{
+        "prefix": "SetHSMode()",
+        "body": "SetHSMode($1)$0",
+        "description": "void SetHSMode (unsigned int hsMode)"
+    },
+    "SetBTDataMode":{
+        "prefix": "SetBTDataMode()",
+        "body": "SetBTDataMode($1)$0",
+        "description": "void SetBTDataMode (const byte dataMode)"
+    },
+    "SetHSDataMode":{
+        "prefix": "SetHSDataMode()",
+        "body": "SetHSDataMode($1)$0",
+        "description": "void SetHSDataMode (const byte dataMode)"
+    },
+    "SetUSBState":{
+        "prefix": "SetUSBState()",
+        "body": "SetUSBState($1)$0",
+        "description": "void SetUSBState (byte usbState)"
+    },
+    "SysMessageWrite":{
+        "prefix": "SysMessageWrite()",
+        "body": "SysMessageWrite($1)$0",
+        "description": "void SysMessageWrite (MessageWriteType &args)"
+    },
+    "SysMessageRead":{
+        "prefix": "SysMessageRead()",
+        "body": "SysMessageRead($1)$0",
+        "description": "void SysMessageRead (MessageReadType &args)"
+    },
+    "SysCommBTWrite":{
+        "prefix": "SysCommBTWrite()",
+        "body": "SysCommBTWrite($1)$0",
+        "description": "void SysCommBTWrite (CommBTWriteType &args)"
+    },
+    "SysCommBTCheckStatus":{
+        "prefix": "SysCommBTCheckStatus()",
+        "body": "SysCommBTCheckStatus($1)$0",
+        "description": "void SysCommBTCheckStatus (CommBTCheckStatusType &args)"
+    },
+    "SysCommExecuteFunction":{
+        "prefix": "SysCommExecuteFunction()",
+        "body": "SysCommExecuteFunction($1)$0",
+        "description": "void SysCommExecuteFunction (CommExecuteFunctionType &args)"
+    },
+    "SysCommHSControl":{
+        "prefix": "SysCommHSControl()",
+        "body": "SysCommHSControl($1)$0",
+        "description": "void SysCommHSControl (CommHSControlType &args)"
+    },
+    "SysCommHSCheckStatus":{
+        "prefix": "SysCommHSCheckStatus()",
+        "body": "SysCommHSCheckStatus($1)$0",
+        "description": "void SysCommHSCheckStatus (CommHSCheckStatusType &args)"
+    },
+    "SysCommHSRead":{
+        "prefix": "SysCommHSRead()",
+        "body": "SysCommHSRead($1)$0",
+        "description": "void SysCommHSRead (CommHSReadWriteType &args)"
+    },
+    "SysCommHSWrite":{
+        "prefix": "SysCommHSWrite()",
+        "body": "SysCommHSWrite($1)$0",
+        "description": "void SysCommHSWrite (CommHSReadWriteType &args)"
+    },
+    "SysCommBTOnOff":{
+        "prefix": "SysCommBTOnOff()",
+        "body": "SysCommBTOnOff($1)$0",
+        "description": "void SysCommBTOnOff (CommBTOnOffType &args)"
+    },
+    "SysCommBTConnection":{
+        "prefix": "SysCommBTConnection()",
+        "body": "SysCommBTConnection($1)$0",
+        "description": "void SysCommBTConnection (CommBTConnectionType &args)"
+    },
+    "RemoteKeepAlive":{
+        "prefix": "RemoteKeepAlive()",
+        "body": "RemoteKeepAlive($1)$0",
+        "description": "char RemoteKeepAlive (byte conn)"
+    },
+    "RemoteMessageRead":{
+        "prefix": "RemoteMessageRead()",
+        "body": "RemoteMessageRead($1)$0",
+        "description": "char RemoteMessageRead (byte conn, byte queue)"
+    },
+    "RemoteMessageWrite":{
+        "prefix": "RemoteMessageWrite()",
+        "body": "RemoteMessageWrite($1)$0",
+        "description": "char RemoteMessageWrite (byte conn, byte queue, string msg)"
+    },
+    "RemotePlaySoundFile":{
+        "prefix": "RemotePlaySoundFile()",
+        "body": "RemotePlaySoundFile($1)$0",
+        "description": "char RemotePlaySoundFile (byte conn, string filename, bool bloop)"
+    },
+    "RemotePlayTone":{
+        "prefix": "RemotePlayTone()",
+        "body": "RemotePlayTone($1)$0",
+        "description": "char RemotePlayTone (byte conn, unsigned int frequency, unsigned int dura"
+    },
+    "RemoteResetMotorPosition":{
+        "prefix": "RemoteResetMotorPosition()",
+        "body": "RemoteResetMotorPosition($1)$0",
+        "description": "char RemoteResetMotorPosition (byte conn, byte port, bool brelative)"
+    },
+    "RemoteResetScaledValue":{
+        "prefix": "RemoteResetScaledValue()",
+        "body": "RemoteResetScaledValue($1)$0",
+        "description": "char RemoteResetScaledValue (byte conn, byte port)"
+    },
+    "RemoteSetInputMode":{
+        "prefix": "RemoteSetInputMode()",
+        "body": "RemoteSetInputMode($1)$0",
+        "description": "char RemoteSetInputMode (byte conn, byte port, byte type, byte mode)"
+    },
+    "RemoteSetOutputState":{
+        "prefix": "RemoteSetOutputState()",
+        "body": "RemoteSetOutputState($1)$0",
+        "description": "char RemoteSetOutputState (byte conn, byte port, char speed, byte mode, byte regmode, char turnpct, byte runstate, unsigned long tacholimit)"
+    },
+    "RemoteStartProgram":{
+        "prefix": "RemoteStartProgram()",
+        "body": "RemoteStartProgram($1)$0",
+        "description": "char RemoteStartProgram (byte conn, string filename)"
+    },
+    "RemoteStopProgram":{
+        "prefix": "RemoteStopProgram()",
+        "body": "RemoteStopProgram($1)$0",
+        "description": "char RemoteStopProgram (byte conn)"
+    },
+    "RemoteStopSound":{
+        "prefix": "RemoteStopSound()",
+        "body": "RemoteStopSound($1)$0",
+        "description": "char RemoteStopSound (byte conn)"
+    },
+    "RemoteGetOutputState":{
+        "prefix": "RemoteGetOutputState()",
+        "body": "RemoteGetOutputState($1)$0",
+        "description": "char RemoteGetOutputState (byte conn, OutputStateType &params)"
+    },
+    "RemoteGetInputValues":{
+        "prefix": "RemoteGetInputValues()",
+        "body": "RemoteGetInputValues($1)$0",
+        "description": "char RemoteGetInputValues (byte conn, InputValuesType &params)"
+    },
+    "RemoteGetBatteryLevel":{
+        "prefix": "RemoteGetBatteryLevel()",
+        "body": "RemoteGetBatteryLevel($1)$0",
+        "description": "char RemoteGetBatteryLevel (byte conn, int &value)"
+    },
+    "RemoteLowspeedGetStatus":{
+        "prefix": "RemoteLowspeedGetStatus()",
+        "body": "RemoteLowspeedGetStatus($1)$0",
+        "description": "char RemoteLowspeedGetStatus (byte conn, byte &value)"
+    },
+    "RemoteLowspeedRead":{
+        "prefix": "RemoteLowspeedRead()",
+        "body": "RemoteLowspeedRead($1)$0",
+        "description": "char RemoteLowspeedRead (byte conn, byte port, byte &bread, byte &data[])"
+    },
+    "RemoteGetCurrentProgramName":{
+        "prefix": "RemoteGetCurrentProgramName()",
+        "body": "RemoteGetCurrentProgramName($1)$0",
+        "description": "char RemoteGetCurrentProgramName (byte conn, string &name)"
+    },
+    "RemoteDatalogRead":{
+        "prefix": "RemoteDatalogRead()",
+        "body": "RemoteDatalogRead($1)$0",
+        "description": "char RemoteDatalogRead (byte conn, bool remove, byte &cnt, byte &log[])"
+    },
+    "RemoteGetContactCount":{
+        "prefix": "RemoteGetContactCount()",
+        "body": "RemoteGetContactCount($1)$0",
+        "description": "char RemoteGetContactCount (byte conn, byte &cnt)"
+    },
+    "RemoteGetContactName":{
+        "prefix": "RemoteGetContactName()",
+        "body": "RemoteGetContactName($1)$0",
+        "description": "char RemoteGetContactName (byte conn, byte idx, string &name)"
+    },
+    "RemoteGetConnectionCount":{
+        "prefix": "RemoteGetConnectionCount()",
+        "body": "RemoteGetConnectionCount($1)$0",
+        "description": "char RemoteGetConnectionCount (byte conn, byte &cnt)"
+    },
+    "RemoteGetConnectionName":{
+        "prefix": "RemoteGetConnectionName()",
+        "body": "RemoteGetConnectionName($1)$0",
+        "description": "char RemoteGetConnectionName (byte conn, byte idx, string &name)"
+    },
+    "RemoteGetProperty":{
+        "prefix": "RemoteGetProperty()",
+        "body": "RemoteGetProperty($1)$0",
+        "description": "char RemoteGetProperty (byte conn, byte property, variant &value)"
+    },
+    "RemoteResetTachoCount":{
+        "prefix": "RemoteResetTachoCount()",
+        "body": "RemoteResetTachoCount($1)$0",
+        "description": "char RemoteResetTachoCount (byte conn, byte port)"
+    },
+    "RemoteDatalogSetTimes":{
+        "prefix": "RemoteDatalogSetTimes()",
+        "body": "RemoteDatalogSetTimes($1)$0",
+        "description": "char RemoteDatalogSetTimes (byte conn, long synctime)"
+    },
+    "RemoteSetProperty":{
+        "prefix": "RemoteSetProperty()",
+        "body": "RemoteSetProperty($1)$0",
+        "description": "char RemoteSetProperty (byte conn, byte prop, variant value)"
+    },
+    "RemoteLowspeedWrite":{
+        "prefix": "RemoteLowspeedWrite()",
+        "body": "RemoteLowspeedWrite($1)$0",
+        "description": "char RemoteLowspeedWrite (byte conn, byte port, byte txlen, byte rxlen, byte data[ ])"
+    },
+    "RemoteOpenRead":{
+        "prefix": "RemoteOpenRead()",
+        "body": "RemoteOpenRead($1)$0",
+        "description": "char RemoteOpenRead (byte conn, string filename, byte &handle, long &size)"
+    },
+    "RemoteOpenAppendData":{
+        "prefix": "RemoteOpenAppendData()",
+        "body": "RemoteOpenAppendData($1)$0",
+        "description": "char RemoteOpenAppendData (byte conn, string filename, byte &handle, long &size)"
+    },
+    "RemoteDeleteFile":{
+        "prefix": "RemoteDeleteFile()",
+        "body": "RemoteDeleteFile($1)$0",
+        "description": "char RemoteDeleteFile (byte conn, string filename)"
+    },
+    "RemoteFindFirstFile":{
+        "prefix": "RemoteFindFirstFile()",
+        "body": "RemoteFindFirstFile($1)$0",
+        "description": "char RemoteFindFirstFile (byte conn, string mask, byte &handle, string &name,"
+    },
+    "RemoteGetFirmwareVersion":{
+        "prefix": "RemoteGetFirmwareVersion()",
+        "body": "RemoteGetFirmwareVersion($1)$0",
+        "description": "char RemoteGetFirmwareVersion (byte conn, byte &pmin, byte &pmaj, byte &fmin, byte &fmaj)"
+    },
+    "RemoteGetBluetoothAddress":{
+        "prefix": "RemoteGetBluetoothAddress()",
+        "body": "RemoteGetBluetoothAddress($1)$0",
+        "description": "char RemoteGetBluetoothAddress (byte conn, byte &btaddr[])"
+    },
+    "RemoteGetDeviceInfo":{
+        "prefix": "RemoteGetDeviceInfo()",
+        "body": "RemoteGetDeviceInfo($1)$0",
+        "description": "char RemoteGetDeviceInfo (byte conn, string &name, byte &btaddr[], byte &btsignal[], long &freemem)"
+    },
+    "RemoteDeleteUserFlash":{
+        "prefix": "RemoteDeleteUserFlash()",
+        "body": "RemoteDeleteUserFlash($1)$0",
+        "description": "char RemoteDeleteUserFlash (byte conn)"
+    },
+    "RemoteOpenWrite":{
+        "prefix": "RemoteOpenWrite()",
+        "body": "RemoteOpenWrite($1)$0",
+        "description": "char RemoteOpenWrite (byte conn, string filename, long size, byte &handle)"
+    },
+    "RemoteOpenWriteLinear":{
+        "prefix": "RemoteOpenWriteLinear()",
+        "body": "RemoteOpenWriteLinear($1)$0",
+        "description": "char RemoteOpenWriteLinear (byte conn, string filename, long size, byte &handle)"
+    },
+    "RemoteOpenWriteData":{
+        "prefix": "RemoteOpenWriteData()",
+        "body": "RemoteOpenWriteData($1)$0",
+        "description": "char RemoteOpenWriteData (byte conn, string filename, long size, byte &handle)"
+    },
+    "RemoteCloseFile":{
+        "prefix": "RemoteCloseFile()",
+        "body": "RemoteCloseFile($1)$0",
+        "description": "char RemoteCloseFile (byte conn, byte handle)"
+    },
+    "RemoteFindNextFile":{
+        "prefix": "RemoteFindNextFile()",
+        "body": "RemoteFindNextFile($1)$0",
+        "description": "char RemoteFindNextFile (byte conn, byte &handle, string &name, long &size)"
+    },
+    "RemotePollCommandLength":{
+        "prefix": "RemotePollCommandLength()",
+        "body": "RemotePollCommandLength($1)$0",
+        "description": "char RemotePollCommandLength (byte conn, byte bufnum, byte &length)"
+    },
+    "RemoteWrite":{
+        "prefix": "RemoteWrite()",
+        "body": "RemoteWrite($1)$0",
+        "description": "char RemoteWrite (byte conn, byte &handle, int &numbytes, byte data[])"
+    },
+    "RemoteRead":{
+        "prefix": "RemoteRead()",
+        "body": "RemoteRead($1)$0",
+        "description": "char RemoteRead (byte conn, byte &handle, int &numbytes, byte &data[])"
+    },
+    "RemoteIOMapRead":{
+        "prefix": "RemoteIOMapRead()",
+        "body": "RemoteIOMapRead($1)$0",
+        "description": "char RemoteIOMapRead (byte conn, long id, int offset, int &numbytes, byte &data[])"
+    },
+    "RemotePollCommand(byte":{
+        "prefix": "RemotePollCommand(byte()",
+        "body": "RemotePollCommand(byte($1)$0",
+        "description": "char RemotePollCommand(byte conn, byte bufnum, byte &len, byte &data[])"
+    },
+    "RemoteRenameFile":{
+        "prefix": "RemoteRenameFile()",
+        "body": "RemoteRenameFile($1)$0",
+        "description": "char RemoteRenameFile (byte conn, string oldname, string newname)"
+    },
+    "RemoteBluetoothFactoryReset":{
+        "prefix": "RemoteBluetoothFactoryReset()",
+        "body": "RemoteBluetoothFactoryReset($1)$0",
+        "description": "char RemoteBluetoothFactoryReset (byte conn)"
+    },
+    "RemoteIOMapWriteValue":{
+        "prefix": "RemoteIOMapWriteValue()",
+        "body": "RemoteIOMapWriteValue($1)$0",
+        "description": "char RemoteIOMapWriteValue (byte conn, long id, int offset, variant value)"
+    },
+    "RemoteIOMapWriteBytes":{
+        "prefix": "RemoteIOMapWriteBytes()",
+        "body": "RemoteIOMapWriteBytes($1)$0",
+        "description": "char RemoteIOMapWriteBytes (byte conn, long id, int offset, byte data[])"
+    },
+    "RemoteSetBrickName":{
+        "prefix": "RemoteSetBrickName()",
+        "body": "RemoteSetBrickName($1)$0",
+        "description": "char RemoteSetBrickName (byte conn, string name)"
+    },         
     "S1":{"prefix":"S1","body":"S1","description":"#define S1 0"},
     "S2":{"prefix":"S2","body":"S2","description":"#define S2 1"},
     "S3":{"prefix":"S3","body":"S3","description":"#define S3 2"},
