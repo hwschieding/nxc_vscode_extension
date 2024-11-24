@@ -3,3 +3,4 @@ vsc-extension-quickstart.md
 CHANGELOG.md
 dev_scripts/reformat_output.json
 dev_scripts/snippet_writer_output.txt
+dev_scripts/doc_input.txt

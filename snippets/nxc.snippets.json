@@ -1203,6 +1203,216 @@
         "prefix": "PlayTones()",
         "body": "PlayTones($1)$0",
         "description": "void PlayTones (Tone tones[])"
+    },
+    "SensorUS":{
+        "prefix": "SensorUS()",
+        "body": "SensorUS($1)$0",
+        "description": "byte SensorUS (const byte port)"
+    },
+    "ReadSensorUSEx":{
+        "prefix": "ReadSensorUSEx()",
+        "body": "ReadSensorUSEx($1)$0",
+        "description": "char ReadSensorUSEx (const byte port, byte &values[ ])"
+    },
+    "ReadSensorEMeter":{
+        "prefix": "ReadSensorEMeter()",
+        "body": "ReadSensorEMeter($1)$0",
+        "description": "char ReadSensorEMeter (const byte &port, float &vIn, float &aIn, float &vOut,)"
+    },
+    "ConfigureTemperatureSensor":{
+        "prefix": "ConfigureTemperatureSensor()",
+        "body": "ConfigureTemperatureSensor($1)$0",
+        "description": "char ConfigureTemperatureSensor (const byte &port, const byte &config)"
+    },
+    "SensorTemperature":{
+        "prefix": "SensorTemperature()",
+        "body": "SensorTemperature($1)$0",
+        "description": "float SensorTemperature (const byte &port)"
+    },
+    "LowspeedStatus":{
+        "prefix": "LowspeedStatus()",
+        "body": "LowspeedStatus($1)$0",
+        "description": "long LowspeedStatus (const byte port, byte &bytesready)"
+    },
+    "LowspeedCheckStatus":{
+        "prefix": "LowspeedCheckStatus()",
+        "body": "LowspeedCheckStatus($1)$0",
+        "description": "long LowspeedCheckStatus (const byte port)"
+    },
+    "LowspeedBytesReady":{
+        "prefix": "LowspeedBytesReady()",
+        "body": "LowspeedBytesReady($1)$0",
+        "description": "byte LowspeedBytesReady (const byte port)"
+    },
+    "LowspeedWrite":{
+        "prefix": "LowspeedWrite()",
+        "body": "LowspeedWrite($1)$0",
+        "description": "long LowspeedWrite (const byte port, byte retlen, byte buffer[ ])"
+    },
+    "LowspeedRead":{
+        "prefix": "LowspeedRead()",
+        "body": "LowspeedRead($1)$0",
+        "description": "long LowspeedRead (const byte port, byte buflen, byte &buffer[ ])"
+    },
+    "I2CStatus":{
+        "prefix": "I2CStatus()",
+        "body": "I2CStatus($1)$0",
+        "description": "long I2CStatus (const byte port, byte &bytesready)"
+    },
+    "I2CCheckStatus":{
+        "prefix": "I2CCheckStatus()",
+        "body": "I2CCheckStatus($1)$0",
+        "description": "long I2CCheckStatus (const byte port)"
+    },
+    "I2CBytesReady":{
+        "prefix": "I2CBytesReady()",
+        "body": "I2CBytesReady($1)$0",
+        "description": "byte I2CBytesReady (const byte port)"
+    },
+    "I2CWrite":{
+        "prefix": "I2CWrite()",
+        "body": "I2CWrite($1)$0",
+        "description": "long I2CWrite (const byte port, byte retlen, byte buffer[ ])"
+    },
+    "I2CRead":{
+        "prefix": "I2CRead()",
+        "body": "I2CRead($1)$0",
+        "description": "long I2CRead (const byte port, byte buflen, byte &buffer[ ])"
+    },
+    "I2CBytes":{
+        "prefix": "I2CBytes()",
+        "body": "I2CBytes($1)$0",
+        "description": "long I2CBytes (const byte port, byte inbuf[ ], byte &count, byte &outbuf[ ])"
+    },
+    "ReadI2CRegister":{
+        "prefix": "ReadI2CRegister()",
+        "body": "ReadI2CRegister($1)$0",
+        "description": "char ReadI2CRegister (byte port, byte i2caddr, byte reg, byte &out)"
+    },
+    "WriteI2CRegister":{
+        "prefix": "WriteI2CRegister()",
+        "body": "WriteI2CRegister($1)$0",
+        "description": "char WriteI2CRegister (byte port, byte i2caddr, byte reg, byte val)"
+    },
+    "I2CDeviceInfo":{
+        "prefix": "I2CDeviceInfo()",
+        "body": "I2CDeviceInfo($1)$0",
+        "description": "string I2CDeviceInfo (byte port, byte i2caddr, byte info)"
+    },
+    "I2CVersion":{
+        "prefix": "I2CVersion()",
+        "body": "I2CVersion($1)$0",
+        "description": "string I2CVersion (byte port, byte i2caddr)"
+    },
+    "I2CVendorId":{
+        "prefix": "I2CVendorId()",
+        "body": "I2CVendorId($1)$0",
+        "description": "string I2CVendorId (byte port, byte i2caddr)"
+    },
+    "I2CDeviceId":{
+        "prefix": "I2CDeviceId()",
+        "body": "I2CDeviceId($1)$0",
+        "description": "string I2CDeviceId (byte port, byte i2caddr)"
+    },
+    "I2CSendCommand":{
+        "prefix": "I2CSendCommand()",
+        "body": "I2CSendCommand($1)$0",
+        "description": "long I2CSendCommand (byte port, byte i2caddr, byte cmd)"
+    },
+    "GetLSInputBuffer":{
+        "prefix": "GetLSInputBuffer()",
+        "body": "GetLSInputBuffer($1)$0",
+        "description": "void GetLSInputBuffer (const byte port, const byte offset, byte cnt, byte &data[ ])"
+    },
+    "GetLSOutputBuffer":{
+        "prefix": "GetLSOutputBuffer()",
+        "body": "GetLSOutputBuffer($1)$0",
+        "description": "void GetLSOutputBuffer (const byte port, const byte offset, byte cnt, byte &data[ ])"
+    },
+    "LSInputBufferInPtr":{
+        "prefix": "LSInputBufferInPtr()",
+        "body": "LSInputBufferInPtr($1)$0",
+        "description": "byte LSInputBufferInPtr (const byte port)"
+    },
+    "LSInputBufferOutPtr":{
+        "prefix": "LSInputBufferOutPtr()",
+        "body": "LSInputBufferOutPtr($1)$0",
+        "description": "byte LSInputBufferOutPtr (const byte port)"
+    },
+    "LSInputBufferBytesToRx":{
+        "prefix": "LSInputBufferBytesToRx()",
+        "body": "LSInputBufferBytesToRx($1)$0",
+        "description": "byte LSInputBufferBytesToRx (const byte port)"
+    },
+    "LSOutputBufferInPtr":{
+        "prefix": "LSOutputBufferInPtr()",
+        "body": "LSOutputBufferInPtr($1)$0",
+        "description": "byte LSOutputBufferInPtr (const byte port)"
+    },
+    "LSOutputBufferOutPtr":{
+        "prefix": "LSOutputBufferOutPtr()",
+        "body": "LSOutputBufferOutPtr($1)$0",
+        "description": "byte LSOutputBufferOutPtr (const byte port)"
+    },
+    "LSOutputBufferBytesToRx":{
+        "prefix": "LSOutputBufferBytesToRx()",
+        "body": "LSOutputBufferBytesToRx($1)$0",
+        "description": "byte LSOutputBufferBytesToRx (const byte port)"
+    },
+    "LSMode":{
+        "prefix": "LSMode()",
+        "body": "LSMode($1)$0",
+        "description": "byte LSMode (const byte port)"
+    },
+    "LSChannelState":{
+        "prefix": "LSChannelState()",
+        "body": "LSChannelState($1)$0",
+        "description": "byte LSChannelState (const byte port)"
+    },
+    "LSErrorType":{
+        "prefix": "LSErrorType()",
+        "body": "LSErrorType($1)$0",
+        "description": "byte LSErrorType (const byte port)"
+    },
+    "LSState":{
+        "prefix": "LSState()",
+        "body": "LSState($1)$0",
+        "description": "byte LSState ()"
+    },
+    "LSSpeed":{
+        "prefix": "LSSpeed()",
+        "body": "LSSpeed($1)$0",
+        "description": "byte LSSpeed ()"
+    },
+    "LSNoRestartOnRead":{
+        "prefix": "LSNoRestartOnRead()",
+        "body": "LSNoRestartOnRead($1)$0",
+        "description": "byte LSNoRestartOnRead ()"
+    },
+    "SetI2COptions":{
+        "prefix": "SetI2COptions()",
+        "body": "SetI2COptions($1)$0",
+        "description": "void SetI2COptions (byte port, byte options)"
+    },
+    "SysCommLSWrite":{
+        "prefix": "SysCommLSWrite()",
+        "body": "SysCommLSWrite($1)$0",
+        "description": "void SysCommLSWrite (CommLSWriteType &args)"
+    },
+    "SysCommLSRead":{
+        "prefix": "SysCommLSRead()",
+        "body": "SysCommLSRead($1)$0",
+        "description": "void SysCommLSRead (CommLSReadType &args)"
+    },
+    "SysCommLSCheckStatus":{
+        "prefix": "SysCommLSCheckStatus()",
+        "body": "SysCommLSCheckStatus($1)$0",
+        "description": "void SysCommLSCheckStatus (CommLSCheckStatusType &args)"
+    },
+    "SysCommLSWriteEx":{
+        "prefix": "SysCommLSWriteEx()",
+        "body": "SysCommLSWriteEx($1)$0",
+        "description": "void SysCommLSWriteEx (CommLSWriteExType &args)"
     },    
     "S1":{"prefix":"S1","body":"S1","description":"#define S1 0"},
     "S2":{"prefix":"S2","body":"S2","description":"#define S2 1"},
