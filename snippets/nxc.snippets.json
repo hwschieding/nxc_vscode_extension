@@ -2703,7 +2703,87 @@
         "prefix": "RemoteSetBrickName()",
         "body": "RemoteSetBrickName($1)$0",
         "description": "char RemoteSetBrickName (byte conn, string name)"
-    },         
+    },
+    "ButtonPressed":{
+        "prefix": "ButtonPressed()",
+        "body": "ButtonPressed($1)$0",
+        "description": "bool ButtonPressed (const byte btn, bool resetCount)"
+    },
+    "ButtonCount":{
+        "prefix": "ButtonCount()",
+        "body": "ButtonCount($1)$0",
+        "description": "byte ButtonCount (const byte btn, bool resetCount)"
+    },
+    "ReadButtonEx":{
+        "prefix": "ReadButtonEx()",
+        "body": "ReadButtonEx($1)$0",
+        "description": "char ReadButtonEx (const byte btn, bool reset, bool &pressed, unsigned int &count)"
+    },
+    "ButtonPressCount":{
+        "prefix": "ButtonPressCount()",
+        "body": "ButtonPressCount($1)$0",
+        "description": "byte ButtonPressCount (const byte btn)"
+    },
+    "ButtonLongPressCount":{
+        "prefix": "ButtonLongPressCount()",
+        "body": "ButtonLongPressCount($1)$0",
+        "description": "byte ButtonLongPressCount (const byte btn)"
+    },
+    "ButtonShortReleaseCount":{
+        "prefix": "ButtonShortReleaseCount()",
+        "body": "ButtonShortReleaseCount($1)$0",
+        "description": "byte ButtonShortReleaseCount (const byte btn)"
+    },
+    "ButtonLongReleaseCount":{
+        "prefix": "ButtonLongReleaseCount()",
+        "body": "ButtonLongReleaseCount($1)$0",
+        "description": "byte ButtonLongReleaseCount (const byte btn)"
+    },
+    "ButtonReleaseCount":{
+        "prefix": "ButtonReleaseCount()",
+        "body": "ButtonReleaseCount($1)$0",
+        "description": "byte ButtonReleaseCount (const byte btn)"
+    },
+    "ButtonState":{
+        "prefix": "ButtonState()",
+        "body": "ButtonState($1)$0",
+        "description": "byte ButtonState (const byte btn)"
+    },
+    "SetButtonLongPressCount":{
+        "prefix": "SetButtonLongPressCount()",
+        "body": "SetButtonLongPressCount($1)$0",
+        "description": "void SetButtonLongPressCount (const byte btn, const byte n)"
+    },
+    "SetButtonLongReleaseCount":{
+        "prefix": "SetButtonLongReleaseCount()",
+        "body": "SetButtonLongReleaseCount($1)$0",
+        "description": "void SetButtonLongReleaseCount (const byte btn, const byte n)"
+    },
+    "SetButtonPressCount":{
+        "prefix": "SetButtonPressCount()",
+        "body": "SetButtonPressCount($1)$0",
+        "description": "void SetButtonPressCount (const byte btn, const byte n)"
+    },
+    "SetButtonReleaseCount":{
+        "prefix": "SetButtonReleaseCount()",
+        "body": "SetButtonReleaseCount($1)$0",
+        "description": "void SetButtonReleaseCount (const byte btn, const byte n)"
+    },
+    "SetButtonShortReleaseCount":{
+        "prefix": "SetButtonShortReleaseCount()",
+        "body": "SetButtonShortReleaseCount($1)$0",
+        "description": "void SetButtonShortReleaseCount (const byte btn, const byte n)"
+    },
+    "SetButtonState":{
+        "prefix": "SetButtonState()",
+        "body": "SetButtonState($1)$0",
+        "description": "void SetButtonState (const byte btn, const byte state)"
+    },
+    "SysReadButton":{
+        "prefix": "SysReadButton()",
+        "body": "SysReadButton($1)$0",
+        "description": "void SysReadButton (ReadButtonType &args)"
+    },
     "S1":{"prefix":"S1","body":"S1","description":"#define S1 0"},
     "S2":{"prefix":"S2","body":"S2","description":"#define S2 1"},
     "S3":{"prefix":"S3","body":"S3","description":"#define S3 2"},
