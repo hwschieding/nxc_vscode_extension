@@ -1413,7 +1413,427 @@
         "prefix": "SysCommLSWriteEx()",
         "body": "SysCommLSWriteEx($1)$0",
         "description": "void SysCommLSWriteEx (CommLSWriteExType &args)"
-    },    
+    },
+    "CurrentTick":{
+        "prefix": "CurrentTick()",
+        "body": "CurrentTick($1)$0",
+        "description": "unsigned long CurrentTick ()"
+    },
+    "FirstTick":{
+        "prefix": "FirstTick()",
+        "body": "FirstTick($1)$0",
+        "description": "unsigned long FirstTick ()"
+    },
+    "ResetSleepTimer":{
+        "prefix": "ResetSleepTimer()",
+        "body": "ResetSleepTimer($1)$0",
+        "description": "long ResetSleepTimer ()"
+    },
+    "SysCall":{
+        "prefix": "SysCall()",
+        "body": "SysCall($1)$0",
+        "description": "void SysCall (byte funcID, variant &args)"
+    },
+    "SysGetStartTick":{
+        "prefix": "SysGetStartTick()",
+        "body": "SysGetStartTick($1)$0",
+        "description": "void SysGetStartTick (GetStartTickType &args)"
+    },
+    "SysKeepAlive":{
+        "prefix": "SysKeepAlive()",
+        "body": "SysKeepAlive($1)$0",
+        "description": "void SysKeepAlive (KeepAliveType &args)"
+    },
+    "SysIOMapRead":{
+        "prefix": "SysIOMapRead()",
+        "body": "SysIOMapRead($1)$0",
+        "description": "void SysIOMapRead (IOMapReadType &args)"
+    },
+    "SysIOMapWrite":{
+        "prefix": "SysIOMapWrite()",
+        "body": "SysIOMapWrite($1)$0",
+        "description": "void SysIOMapWrite (IOMapWriteType &args)"
+    },
+    "SysIOMapReadByID":{
+        "prefix": "SysIOMapReadByID()",
+        "body": "SysIOMapReadByID($1)$0",
+        "description": "void SysIOMapReadByID (IOMapReadByIDType &args)"
+    },
+    "SysIOMapWriteByID":{
+        "prefix": "SysIOMapWriteByID()",
+        "body": "SysIOMapWriteByID($1)$0",
+        "description": "void SysIOMapWriteByID (IOMapWriteByIDType &args)"
+    },
+    "SysDatalogWrite":{
+        "prefix": "SysDatalogWrite()",
+        "body": "SysDatalogWrite($1)$0",
+        "description": "void SysDatalogWrite (DatalogWriteType &args)"
+    },
+    "SysDatalogGetTimes":{
+        "prefix": "SysDatalogGetTimes()",
+        "body": "SysDatalogGetTimes($1)$0",
+        "description": "void SysDatalogGetTimes (DatalogGetTimesType &args)"
+    },
+    "SysReadSemData":{
+        "prefix": "SysReadSemData()",
+        "body": "SysReadSemData($1)$0",
+        "description": "void SysReadSemData (ReadSemDataType &args)"
+    },
+    "SysWriteSemData":{
+        "prefix": "SysWriteSemData()",
+        "body": "SysWriteSemData($1)$0",
+        "description": "void SysWriteSemData (WriteSemDataType &args)"
+    },
+    "SysUpdateCalibCacheInfo":{
+        "prefix": "SysUpdateCalibCacheInfo()",
+        "body": "SysUpdateCalibCacheInfo($1)$0",
+        "description": "void SysUpdateCalibCacheInfo (UpdateCalibCacheInfoType &args)"
+    },
+    "SysComputeCalibValue":{
+        "prefix": "SysComputeCalibValue()",
+        "body": "SysComputeCalibValue($1)$0",
+        "description": "void SysComputeCalibValue (ComputeCalibValueType &args)"
+    },
+    "GetMemoryInfo":{
+        "prefix": "GetMemoryInfo()",
+        "body": "GetMemoryInfo($1)$0",
+        "description": "char GetMemoryInfo (bool Compact, unsigned int &PoolSize, unsigned int &DataspaceSize)"
+    },
+    "SysMemoryManager":{
+        "prefix": "SysMemoryManager()",
+        "body": "SysMemoryManager($1)$0",
+        "description": "void SysMemoryManager (MemoryManagerType &args)"
+    },
+    "GetLastResponseInfo":{
+        "prefix": "GetLastResponseInfo()",
+        "body": "GetLastResponseInfo($1)$0",
+        "description": "char GetLastResponseInfo (bool Clear, byte &Length, byte &Command, byte &Buffer[ ])"
+    },
+    "SysReadLastResponse":{
+        "prefix": "SysReadLastResponse()",
+        "body": "SysReadLastResponse($1)$0",
+        "description": "void SysReadLastResponse (ReadLastResponseType &args)"
+    },
+    "Wait":{
+        "prefix": "Wait()",
+        "body": "Wait($1)$0",
+        "description": "void Wait (unsigned long ms)"
+    },
+    "Yield":{
+        "prefix": "Yield()",
+        "body": "Yield($1)$0",
+        "description": "void Yield ()"
+    },
+    "StopAllTasks":{
+        "prefix": "StopAllTasks()",
+        "body": "StopAllTasks($1)$0",
+        "description": "void StopAllTasks ()"
+    },
+    "Stop":{
+        "prefix": "Stop()",
+        "body": "Stop($1)$0",
+        "description": "void Stop (bool bvalue)"
+    },
+    "ExitTo":{
+        "prefix": "ExitTo()",
+        "body": "ExitTo($1)$0",
+        "description": "void ExitTo (task newTask)"
+    },
+    "Precedes":{
+        "prefix": "Precedes()",
+        "body": "Precedes($1)$0",
+        "description": "void Precedes (task task1, task task2,..., task taskN)"
+    },
+    "Follows":{
+        "prefix": "Follows()",
+        "body": "Follows($1)$0",
+        "description": "void Follows (task task1, task task2,..., task taskN)"
+    },
+    "Acquire":{
+        "prefix": "Acquire()",
+        "body": "Acquire($1)$0",
+        "description": "void Acquire (mutex m)"
+    },
+    "Release":{
+        "prefix": "Release()",
+        "body": "Release($1)$0",
+        "description": "void Release (mutex m)"
+    },
+    "StartTask":{
+        "prefix": "StartTask()",
+        "body": "StartTask($1)$0",
+        "description": "void StartTask (task t)"
+    },
+    "StopTask":{
+        "prefix": "StopTask()",
+        "body": "StopTask($1)$0",
+        "description": "void StopTask (task t)"
+    },
+    "BranchTest":{
+        "prefix": "BranchTest()",
+        "body": "BranchTest($1)$0",
+        "description": "void BranchTest (const byte cmp, constant void lbl, variant value)"
+    },
+    "BranchComp":{
+        "prefix": "BranchComp()",
+        "body": "BranchComp($1)$0",
+        "description": "void BranchComp (const byte cmp, constant void lbl, variant v1, variant v2)"
+    },
+    "SetIOMapBytes":{
+        "prefix": "SetIOMapBytes()",
+        "body": "SetIOMapBytes($1)$0",
+        "description": "void SetIOMapBytes (string moduleName, unsigned int offset, unsigned int count, byte data[ ])"
+    },
+    "SetIOMapValue":{
+        "prefix": "SetIOMapValue()",
+        "body": "SetIOMapValue($1)$0",
+        "description": "void SetIOMapValue (string moduleName, unsigned int offset, variant value)"
+    },
+    "GetIOMapBytes":{
+        "prefix": "GetIOMapBytes()",
+        "body": "GetIOMapBytes($1)$0",
+        "description": "void GetIOMapBytes (string moduleName, unsigned int offset, unsigned int count, byte &data[ ])"
+    },
+    "GetIOMapValue":{
+        "prefix": "GetIOMapValue()",
+        "body": "GetIOMapValue($1)$0",
+        "description": "void GetIOMapValue (string moduleName, unsigned int offset, variant &value)"
+    },
+    "GetLowSpeedModuleBytes":{
+        "prefix": "GetLowSpeedModuleBytes()",
+        "body": "GetLowSpeedModuleBytes($1)$0",
+        "description": "void GetLowSpeedModuleBytes (unsigned int offset, unsigned int count, byte &data[ ])"
+    },
+    "GetDisplayModuleBytes":{
+        "prefix": "GetDisplayModuleBytes()",
+        "body": "GetDisplayModuleBytes($1)$0",
+        "description": "void GetDisplayModuleBytes (unsigned int offset, unsigned int count, byte &data[ ])"
+    },
+    "GetCommModuleBytes":{
+        "prefix": "GetCommModuleBytes()",
+        "body": "GetCommModuleBytes($1)$0",
+        "description": "void GetCommModuleBytes (unsigned int offset, unsigned int count, byte &data[ ])"
+    },
+    "GetCommandModuleBytes":{
+        "prefix": "GetCommandModuleBytes()",
+        "body": "GetCommandModuleBytes($1)$0",
+        "description": "void GetCommandModuleBytes (unsigned int offset, unsigned int count, byte &data[ ])"
+    },
+    "SetCommandModuleBytes":{
+        "prefix": "SetCommandModuleBytes()",
+        "body": "SetCommandModuleBytes($1)$0",
+        "description": "void SetCommandModuleBytes (unsigned int offset, unsigned int count, byte data[ ])"
+    },
+    "SetLowSpeedModuleBytes":{
+        "prefix": "SetLowSpeedModuleBytes()",
+        "body": "SetLowSpeedModuleBytes($1)$0",
+        "description": "void SetLowSpeedModuleBytes (unsigned int offset, unsigned int count, byte data[ ])"
+    },
+    "SetDisplayModuleBytes":{
+        "prefix": "SetDisplayModuleBytes()",
+        "body": "SetDisplayModuleBytes($1)$0",
+        "description": "void SetDisplayModuleBytes (unsigned int offset, unsigned int count, byte data[ ])"
+    },
+    "SetCommModuleBytes":{
+        "prefix": "SetCommModuleBytes()",
+        "body": "SetCommModuleBytes($1)$0",
+        "description": "void SetCommModuleBytes (unsigned int offset, unsigned int count, byte data[ ])"
+    },
+    "SetIOMapBytesByID":{
+        "prefix": "SetIOMapBytesByID()",
+        "body": "SetIOMapBytesByID($1)$0",
+        "description": "void SetIOMapBytesByID (unsigned long moduleId, unsigned int offset, unsigned int count, byte data[ ])"
+    },
+    "SetIOMapValueByID":{
+        "prefix": "SetIOMapValueByID()",
+        "body": "SetIOMapValueByID($1)$0",
+        "description": "void SetIOMapValueByID (unsigned long moduleId, unsigned int offset, variant value)"
+    },
+    "GetIOMapBytesByID":{
+        "prefix": "GetIOMapBytesByID()",
+        "body": "GetIOMapBytesByID($1)$0",
+        "description": "void GetIOMapBytesByID (unsigned long moduleId, unsigned int offset, unsigned int count, byte &data[ ])"
+    },
+    "GetIOMapValueByID":{
+        "prefix": "GetIOMapValueByID()",
+        "body": "GetIOMapValueByID($1)$0",
+        "description": "void GetIOMapValueByID (unsigned long moduleId, unsigned int offset, variant &value)"
+    },
+    "SetCommandModuleValue":{
+        "prefix": "SetCommandModuleValue()",
+        "body": "SetCommandModuleValue($1)$0",
+        "description": "void SetCommandModuleValue (unsigned int offset, variant value)"
+    },
+    "SetIOCtrlModuleValue":{
+        "prefix": "SetIOCtrlModuleValue()",
+        "body": "SetIOCtrlModuleValue($1)$0",
+        "description": "void SetIOCtrlModuleValue (unsigned int offset, variant value)"
+    },
+    "SetLoaderModuleValue":{
+        "prefix": "SetLoaderModuleValue()",
+        "body": "SetLoaderModuleValue($1)$0",
+        "description": "void SetLoaderModuleValue (unsigned int offset, variant value)"
+    },
+    "SetUIModuleValue":{
+        "prefix": "SetUIModuleValue()",
+        "body": "SetUIModuleValue($1)$0",
+        "description": "void SetUIModuleValue (unsigned int offset, variant value)"
+    },
+    "SetSoundModuleValue":{
+        "prefix": "SetSoundModuleValue()",
+        "body": "SetSoundModuleValue($1)$0",
+        "description": "void SetSoundModuleValue (unsigned int offset, variant value)"
+    },
+    "SetButtonModuleValue":{
+        "prefix": "SetButtonModuleValue()",
+        "body": "SetButtonModuleValue($1)$0",
+        "description": "void SetButtonModuleValue (unsigned int offset, variant value)"
+    },
+    "SetInputModuleValue":{
+        "prefix": "SetInputModuleValue()",
+        "body": "SetInputModuleValue($1)$0",
+        "description": "void SetInputModuleValue (unsigned int offset, variant value)"
+    },
+    "SetOutputModuleValue":{
+        "prefix": "SetOutputModuleValue()",
+        "body": "SetOutputModuleValue($1)$0",
+        "description": "void SetOutputModuleValue (unsigned int offset, variant value)"
+    },
+    "SetLowSpeedModuleValue":{
+        "prefix": "SetLowSpeedModuleValue()",
+        "body": "SetLowSpeedModuleValue($1)$0",
+        "description": "void SetLowSpeedModuleValue (unsigned int offset, variant value)"
+    },
+    "SetDisplayModuleValue":{
+        "prefix": "SetDisplayModuleValue()",
+        "body": "SetDisplayModuleValue($1)$0",
+        "description": "void SetDisplayModuleValue (unsigned int offset, variant value)"
+    },
+    "SetCommModuleValue":{
+        "prefix": "SetCommModuleValue()",
+        "body": "SetCommModuleValue($1)$0",
+        "description": "void SetCommModuleValue (unsigned int offset, variant value)"
+    },
+    "GetCommandModuleValue":{
+        "prefix": "GetCommandModuleValue()",
+        "body": "GetCommandModuleValue($1)$0",
+        "description": "void GetCommandModuleValue (unsigned int offset, variant &value)"
+    },
+    "GetLoaderModuleValue":{
+        "prefix": "GetLoaderModuleValue()",
+        "body": "GetLoaderModuleValue($1)$0",
+        "description": "void GetLoaderModuleValue (unsigned int offset, variant &value)"
+    },
+    "GetSoundModuleValue":{
+        "prefix": "GetSoundModuleValue()",
+        "body": "GetSoundModuleValue($1)$0",
+        "description": "void GetSoundModuleValue (unsigned int offset, variant &value)"
+    },
+    "GetButtonModuleValue":{
+        "prefix": "GetButtonModuleValue()",
+        "body": "GetButtonModuleValue($1)$0",
+        "description": "void GetButtonModuleValue (unsigned int offset, variant &value)"
+    },
+    "GetUIModuleValue":{
+        "prefix": "GetUIModuleValue()",
+        "body": "GetUIModuleValue($1)$0",
+        "description": "void GetUIModuleValue (unsigned int offset, variant &value)"
+    },
+    "GetInputModuleValue":{
+        "prefix": "GetInputModuleValue()",
+        "body": "GetInputModuleValue($1)$0",
+        "description": "void GetInputModuleValue (unsigned int offset, variant &value)"
+    },
+    "GetOutputModuleValue":{
+        "prefix": "GetOutputModuleValue()",
+        "body": "GetOutputModuleValue($1)$0",
+        "description": "void GetOutputModuleValue (unsigned int offset, variant &value)"
+    },
+    "GetLowSpeedModuleValue":{
+        "prefix": "GetLowSpeedModuleValue()",
+        "body": "GetLowSpeedModuleValue($1)$0",
+        "description": "void GetLowSpeedModuleValue (unsigned int offset, variant &value)"
+    },
+    "GetDisplayModuleValue":{
+        "prefix": "GetDisplayModuleValue()",
+        "body": "GetDisplayModuleValue($1)$0",
+        "description": "void GetDisplayModuleValue (unsigned int offset, variant &value)"
+    },
+    "GetCommModuleValue":{
+        "prefix": "GetCommModuleValue()",
+        "body": "GetCommModuleValue($1)$0",
+        "description": "void GetCommModuleValue (unsigned int offset, variant &value)"
+    },
+    "ArrayBuild":{
+        "prefix": "ArrayBuild()",
+        "body": "ArrayBuild($1)$0",
+        "description": "void ArrayBuild (variant &aout[ ], variant src1, variant src2,..., variant srcN)"
+    },
+    "ArrayLen":{
+        "prefix": "ArrayLen()",
+        "body": "ArrayLen($1)$0",
+        "description": "unsigned int ArrayLen (variant data[ ])"
+    },
+    "ArrayInit":{
+        "prefix": "ArrayInit()",
+        "body": "ArrayInit($1)$0",
+        "description": "void ArrayInit (variant &aout[ ], variant value, unsigned int count)"
+    },
+    "ArraySubset":{
+        "prefix": "ArraySubset()",
+        "body": "ArraySubset($1)$0",
+        "description": "void ArraySubset (variant &aout[ ], variant asrc[ ], unsigned int idx, unsigned int len)"
+    },
+    "ArrayIndex":{
+        "prefix": "ArrayIndex()",
+        "body": "ArrayIndex($1)$0",
+        "description": "void ArrayIndex (variant &out, variant asrc[ ], unsigned int idx)"
+    },
+    "ArrayReplace":{
+        "prefix": "ArrayReplace()",
+        "body": "ArrayReplace($1)$0",
+        "description": "void ArrayReplace (variant &asrc[ ], unsigned int idx, variant value)"
+    },
+    "ArraySum":{
+        "prefix": "ArraySum()",
+        "body": "ArraySum($1)$0",
+        "description": "variant ArraySum (const variant &src[ ], unsigned int idx, unsigned int len)"
+    },
+    "ArrayMean":{
+        "prefix": "ArrayMean()",
+        "body": "ArrayMean($1)$0",
+        "description": "variant ArrayMean (const variant &src[ ], unsigned int idx, unsigned int len)"
+    },
+    "ArraySumSqr":{
+        "prefix": "ArraySumSqr()",
+        "body": "ArraySumSqr($1)$0",
+        "description": "variant ArraySumSqr (const variant &src[ ], unsigned int idx, unsigned int len)"
+    },
+    "ArrayStd":{
+        "prefix": "ArrayStd()",
+        "body": "ArrayStd($1)$0",
+        "description": "variant ArrayStd (const variant &src[ ], unsigned int idx, unsigned int len)"
+    },
+    "ArrayMin":{
+        "prefix": "ArrayMin()",
+        "body": "ArrayMin($1)$0",
+        "description": "variant ArrayMin (const variant &src[ ], unsigned int idx, unsigned int len)"
+    },
+    "ArrayMax":{
+        "prefix": "ArrayMax()",
+        "body": "ArrayMax($1)$0",
+        "description": "variant ArrayMax (const variant &src[ ], unsigned int idx, unsigned int len)"
+    },
+    "ArraySort":{
+        "prefix": "ArraySort()",
+        "body": "ArraySort($1)$0",
+        "description": "void ArraySort (variant &dest[ ], const variant &src[ ], unsigned int idx, unsigned int len)"
+    },
+    "ArrayOp":{
+        "prefix": "ArrayOp()",
+        "body": "ArrayOp($1)$0",
+        "description": "void ArrayOp (const byte op, variant &dest, const variant &src[ ], unsigned int idx, unsigned int len)"
+    },         
     "S1":{"prefix":"S1","body":"S1","description":"#define S1 0"},
     "S2":{"prefix":"S2","body":"S2","description":"#define S2 1"},
     "S3":{"prefix":"S3","body":"S3","description":"#define S3 2"},
