@@ -1833,7 +1833,22 @@
         "prefix": "ArrayOp()",
         "body": "ArrayOp($1)$0",
         "description": "void ArrayOp (const byte op, variant &dest, const variant &src[ ], unsigned int idx, unsigned int len)"
-    },         
+    },
+    "PowerDown":{
+        "prefix": "PowerDown()",
+        "body": "PowerDown($1)$0",
+        "description":"void PowerDown ()"
+    },
+    "SleepNow":{
+        "prefix":"SleepNow()",
+        "body":"SleepNow($1)$0",
+        "description":"void SleepNow ()"
+    },
+    "RebootInFirmwareMode":{
+        "prefix":"RebootInFirmwareMode()",
+        "body":"RebootInFirmwareMode($1)$0",
+        "description":"void RebootInFirmwareMode ()"
+    },
     "S1":{"prefix":"S1","body":"S1","description":"#define S1 0"},
     "S2":{"prefix":"S2","body":"S2","description":"#define S2 1"},
     "S3":{"prefix":"S3","body":"S3","description":"#define S3 2"},
