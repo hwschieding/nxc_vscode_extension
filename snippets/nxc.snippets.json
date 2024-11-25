@@ -2784,6 +2784,381 @@
         "body": "SysReadButton($1)$0",
         "description": "void SysReadButton (ReadButtonType &args)"
     },
+    "CommandFlags":{
+        "prefix": "CommandFlags()",
+        "body": "CommandFlags($1)$0",
+        "description": "byte CommandFlags (void)"
+    },
+    "UIState":{
+        "prefix": "UIState()",
+        "body": "UIState($1)$0",
+        "description": "byte UIState (void)"
+    },
+    "UIButton":{
+        "prefix": "UIButton()",
+        "body": "UIButton($1)$0",
+        "description": "byte UIButton (void)"
+    },
+    "VMRunState":{
+        "prefix": "VMRunState()",
+        "body": "VMRunState($1)$0",
+        "description": "byte VMRunState (void)"
+    },
+    "BatteryState":{
+        "prefix": "BatteryState()",
+        "body": "BatteryState($1)$0",
+        "description": "byte BatteryState (void)"
+    },
+    "BluetoothState":{
+        "prefix": "BluetoothState()",
+        "body": "BluetoothState($1)$0",
+        "description": "byte BluetoothState (void)"
+    },
+    "UsbState":{
+        "prefix": "UsbState()",
+        "body": "UsbState($1)$0",
+        "description": "byte UsbState (void)"
+    },
+    "SleepTimeout":{
+        "prefix": "SleepTimeout()",
+        "body": "SleepTimeout($1)$0",
+        "description": "byte SleepTimeout (void)"
+    },
+    "SleepTime":{
+        "prefix": "SleepTime()",
+        "body": "SleepTime($1)$0",
+        "description": "byte SleepTime (void)"
+    },
+    "SleepTimer":{
+        "prefix": "SleepTimer()",
+        "body": "SleepTimer($1)$0",
+        "description": "byte SleepTimer (void)"
+    },
+    "RechargeableBattery":{
+        "prefix": "RechargeableBattery()",
+        "body": "RechargeableBattery($1)$0",
+        "description": "bool RechargeableBattery (void)"
+    },
+    "Volume":{
+        "prefix": "Volume()",
+        "body": "Volume($1)$0",
+        "description": "byte Volume (void)"
+    },
+    "OnBrickProgramPointer":{
+        "prefix": "OnBrickProgramPointer()",
+        "body": "OnBrickProgramPointer($1)$0",
+        "description": "byte OnBrickProgramPointer (void)"
+    },
+    "AbortFlag":{
+        "prefix": "AbortFlag()",
+        "body": "AbortFlag($1)$0",
+        "description": "byte AbortFlag (void)"
+    },
+    "LongAbort":{
+        "prefix": "LongAbort()",
+        "body": "LongAbort($1)$0",
+        "description": "byte LongAbort (void)"
+    },
+    "BatteryLevel":{
+        "prefix": "BatteryLevel()",
+        "body": "BatteryLevel($1)$0",
+        "description": "unsigned int BatteryLevel (void)"
+    },
+    "SetCommandFlags":{
+        "prefix": "SetCommandFlags()",
+        "body": "SetCommandFlags($1)$0",
+        "description": "void SetCommandFlags (const byte cmdFlags)"
+    },
+    "SetUIButton":{
+        "prefix": "SetUIButton()",
+        "body": "SetUIButton($1)$0",
+        "description": "void SetUIButton (byte btn)"
+    },
+    "SetUIState":{
+        "prefix": "SetUIState()",
+        "body": "SetUIState($1)$0",
+        "description": "void SetUIState (byte state)"
+    },
+    "SetVMRunState":{
+        "prefix": "SetVMRunState()",
+        "body": "SetVMRunState($1)$0",
+        "description": "void SetVMRunState (const byte vmRunState)"
+    },
+    "SetBatteryState":{
+        "prefix": "SetBatteryState()",
+        "body": "SetBatteryState($1)$0",
+        "description": "void SetBatteryState (byte state)"
+    },
+    "SetBluetoothState":{
+        "prefix": "SetBluetoothState()",
+        "body": "SetBluetoothState($1)$0",
+        "description": "void SetBluetoothState (byte state)"
+    },
+    "SetSleepTimeout":{
+        "prefix": "SetSleepTimeout()",
+        "body": "SetSleepTimeout($1)$0",
+        "description": "void SetSleepTimeout (const byte n)"
+    },
+    "SetSleepTime":{
+        "prefix": "SetSleepTime()",
+        "body": "SetSleepTime($1)$0",
+        "description": "void SetSleepTime (const byte n)"
+    },
+    "SetSleepTimer":{
+        "prefix": "SetSleepTimer()",
+        "body": "SetSleepTimer($1)$0",
+        "description": "void SetSleepTimer (const byte n)"
+    },
+    "SetVolume":{
+        "prefix": "SetVolume()",
+        "body": "SetVolume($1)$0",
+        "description": "void SetVolume (byte volume)"
+    },
+    "SetOnBrickProgramPointer":{
+        "prefix": "SetOnBrickProgramPointer()",
+        "body": "SetOnBrickProgramPointer($1)$0",
+        "description": "void SetOnBrickProgramPointer (byte obpStep)"
+    },
+    "ForceOff":{
+        "prefix": "ForceOff()",
+        "body": "ForceOff($1)$0",
+        "description": "void ForceOff (byte num)"
+    },
+    "SetAbortFlag":{
+        "prefix": "SetAbortFlag()",
+        "body": "SetAbortFlag($1)$0",
+        "description": "void SetAbortFlag (byte abortFlag)"
+    },
+    "SetLongAbort":{
+        "prefix": "SetLongAbort()",
+        "body": "SetLongAbort($1)$0",
+        "description": "void SetLongAbort (bool longAbort)"
+    },
+    "SysSetSleepTimeout":{
+        "prefix": "SysSetSleepTimeout()",
+        "body": "SysSetSleepTimeout($1)$0",
+        "description": "void SysSetSleepTimeout (SetSleepTimeoutType &args)"
+    },
+    "FreeMemory":{
+        "prefix": "FreeMemory()",
+        "body": "FreeMemory($1)$0",
+        "description": "unsigned int FreeMemory (void)"
+    },
+    "CreateFile":{
+        "prefix": "CreateFile()",
+        "body": "CreateFile($1)$0",
+        "description": "unsigned int CreateFile (string fname, unsigned int fsize, byte &handle)"
+    },
+    "OpenFileAppend":{
+        "prefix": "OpenFileAppend()",
+        "body": "OpenFileAppend($1)$0",
+        "description": "unsigned int OpenFileAppend (string fname, unsigned int &fsize, byte &handle)"
+    },
+    "OpenFileRead":{
+        "prefix": "OpenFileRead()",
+        "body": "OpenFileRead($1)$0",
+        "description": "unsigned int OpenFileRead (string fname, unsigned int &fsize, byte &handle)"
+    },
+    "CloseFile":{
+        "prefix": "CloseFile()",
+        "body": "CloseFile($1)$0",
+        "description": "unsigned int CloseFile (byte handle)"
+    },
+    "ResolveHandle":{
+        "prefix": "ResolveHandle()",
+        "body": "ResolveHandle($1)$0",
+        "description": "unsigned int ResolveHandle (string filename, byte &handle, bool &writeable)"
+    },
+    "RenameFile":{
+        "prefix": "RenameFile()",
+        "body": "RenameFile($1)$0",
+        "description": "unsigned int RenameFile (string oldname, string newname)"
+    },
+    "DeleteFile":{
+        "prefix": "DeleteFile()",
+        "body": "DeleteFile($1)$0",
+        "description": "unsigned int DeleteFile (string fname)"
+    },
+    "ResizeFile":{
+        "prefix": "ResizeFile()",
+        "body": "ResizeFile($1)$0",
+        "description": "unsigned int ResizeFile (string fname, const unsigned int newsize)"
+    },
+    "CreateFileLinear":{
+        "prefix": "CreateFileLinear()",
+        "body": "CreateFileLinear($1)$0",
+        "description": "unsigned int CreateFileLinear (string fname, unsigned int fsize, byte &handle)"
+    },
+    "CreateFileNonLinear":{
+        "prefix": "CreateFileNonLinear()",
+        "body": "CreateFileNonLinear($1)$0",
+        "description": "unsigned int CreateFileNonLinear (string fname, unsigned int fsize, byte &handle)"
+    },
+    "OpenFileReadLinear":{
+        "prefix": "OpenFileReadLinear()",
+        "body": "OpenFileReadLinear($1)$0",
+        "description": "unsigned int OpenFileReadLinear (string fname, unsigned int &fsize, byte &handle)"
+    },
+    "FindFirstFile":{
+        "prefix": "FindFirstFile()",
+        "body": "FindFirstFile($1)$0",
+        "description": "unsigned int FindFirstFile (string &fname, byte &handle)"
+    },
+    "FindNextFile":{
+        "prefix": "FindNextFile()",
+        "body": "FindNextFile($1)$0",
+        "description": "unsigned int FindNextFile (string &fname, byte &handle)"
+    },
+    "SizeOf":{
+        "prefix": "SizeOf()",
+        "body": "SizeOf($1)$0",
+        "description": "unsigned int SizeOf (variant &value)"
+    },
+    "Read":{
+        "prefix": "Read()",
+        "body": "Read($1)$0",
+        "description": "unsigned int Read (byte handle, variant &value)"
+    },
+    "ReadLn":{
+        "prefix": "ReadLn()",
+        "body": "ReadLn($1)$0",
+        "description": "unsigned int ReadLn (byte handle, variant &value)"
+    },
+    "ReadBytes":{
+        "prefix": "ReadBytes()",
+        "body": "ReadBytes($1)$0",
+        "description": "unsigned int ReadBytes (byte handle, unsigned int &length, byte &buf[])"
+    },
+    "ReadLnString":{
+        "prefix": "ReadLnString()",
+        "body": "ReadLnString($1)$0",
+        "description": "unsigned int ReadLnString (byte handle, string &output)"
+    },
+    "Write":{
+        "prefix": "Write()",
+        "body": "Write($1)$0",
+        "description": "unsigned int Write (byte handle, const variant &value)"
+    },
+    "WriteBytes":{
+        "prefix": "WriteBytes()",
+        "body": "WriteBytes($1)$0",
+        "description": "unsigned int WriteBytes (byte handle, const byte &buf[], unsigned int &cnt)"
+    },
+    "WriteBytesEx":{
+        "prefix": "WriteBytesEx()",
+        "body": "WriteBytesEx($1)$0",
+        "description": "unsignedint WriteBytesEx (byte handle, unsigned int &len, const byte &buf[])"
+    },
+    "WriteLn":{
+        "prefix": "WriteLn()",
+        "body": "WriteLn($1)$0",
+        "description": "unsigned int WriteLn (byte handle, const variant &value)"
+    },
+    "WriteLnString":{
+        "prefix": "WriteLnString()",
+        "body": "WriteLnString($1)$0",
+        "description": "unsigned int WriteLnString (byte handle, const string &str, unsigned int &cnt)"
+    },
+    "WriteString":{
+        "prefix": "WriteString()",
+        "body": "WriteString($1)$0",
+        "description": "unsigned int WriteString (byte handle, const string &str, unsigned int &cnt)"
+    },
+    "SysFileOpenRead":{
+        "prefix": "SysFileOpenRead()",
+        "body": "SysFileOpenRead($1)$0",
+        "description": "void SysFileOpenRead (FileOpenType &args)"
+    },
+    "SysFileOpenWrite":{
+        "prefix": "SysFileOpenWrite()",
+        "body": "SysFileOpenWrite($1)$0",
+        "description": "void SysFileOpenWrite (FileOpenType &args)"
+    },
+    "SysFileOpenAppend":{
+        "prefix": "SysFileOpenAppend()",
+        "body": "SysFileOpenAppend($1)$0",
+        "description": "void SysFileOpenAppend (FileOpenType &args)"
+    },
+    "SysFileRead":{
+        "prefix": "SysFileRead()",
+        "body": "SysFileRead($1)$0",
+        "description": "void SysFileRead (FileReadWriteType &args)"
+    },
+    "SysFileWrite":{
+        "prefix": "SysFileWrite()",
+        "body": "SysFileWrite($1)$0",
+        "description": "void SysFileWrite (FileReadWriteType &args)"
+    },
+    "SysFileClose":{
+        "prefix": "SysFileClose()",
+        "body": "SysFileClose($1)$0",
+        "description": "void SysFileClose (FileCloseType &args)"
+    },
+    "SysFileResolveHandle":{
+        "prefix": "SysFileResolveHandle()",
+        "body": "SysFileResolveHandle($1)$0",
+        "description": "void SysFileResolveHandle (FileResolveHandleType &args)"
+    },
+    "SysFileRename":{
+        "prefix": "SysFileRename()",
+        "body": "SysFileRename($1)$0",
+        "description": "void SysFileRename (FileRenameType &args)"
+    },
+    "SysFileDelete":{
+        "prefix": "SysFileDelete()",
+        "body": "SysFileDelete($1)$0",
+        "description": "void SysFileDelete (FileDeleteType &args)"
+    },
+    "SysLoaderExecuteFunction":{
+        "prefix": "SysLoaderExecuteFunction()",
+        "body": "SysLoaderExecuteFunction($1)$0",
+        "description": "void SysLoaderExecuteFunction (LoaderExecuteFunctionType &args)"
+    },
+    "SysFileFindFirst":{
+        "prefix": "SysFileFindFirst()",
+        "body": "SysFileFindFirst($1)$0",
+        "description": "void SysFileFindFirst (FileFindType &args)"
+    },
+    "SysFileFindNext":{
+        "prefix": "SysFileFindNext()",
+        "body": "SysFileFindNext($1)$0",
+        "description": "void SysFileFindNext (FileFindType &args)"
+    },
+    "SysFileOpenWriteLinear":{
+        "prefix": "SysFileOpenWriteLinear()",
+        "body": "SysFileOpenWriteLinear($1)$0",
+        "description": "void SysFileOpenWriteLinear (FileOpenType &args)"
+    },
+    "SysFileOpenWriteNonLinear":{
+        "prefix": "SysFileOpenWriteNonLinear()",
+        "body": "SysFileOpenWriteNonLinear($1)$0",
+        "description": "void SysFileOpenWriteNonLinear (FileOpenType &args)"
+    },
+    "SysFileOpenReadLinear":{
+        "prefix": "SysFileOpenReadLinear()",
+        "body": "SysFileOpenReadLinear($1)$0",
+        "description": "void SysFileOpenReadLinear (FileOpenType &args)"
+    },
+    "SysFileSeek":{
+        "prefix": "SysFileSeek()",
+        "body": "SysFileSeek($1)$0",
+        "description": "void SysFileSeek (FileSeekType &args)"
+    },
+    "SysFileResize":{
+        "prefix": "SysFileResize()",
+        "body": "SysFileResize($1)$0",
+        "description": "void SysFileResize (FileResizeType &args)"
+    },
+    "SysFileTell":{
+        "prefix": "SysFileTell()",
+        "body": "SysFileTell($1)$0",
+        "description": "void SysFileTell (FileTellType &args)"
+    },
+    "SysListFiles":{
+        "prefix": "SysListFiles()",
+        "body": "SysListFiles($1)$0",
+        "description": "void SysListFiles (ListFilesType &args)"
+    },
     "S1":{"prefix":"S1","body":"S1","description":"#define S1 0"},
     "S2":{"prefix":"S2","body":"S2","description":"#define S2 1"},
     "S3":{"prefix":"S3","body":"S3","description":"#define S3 2"},

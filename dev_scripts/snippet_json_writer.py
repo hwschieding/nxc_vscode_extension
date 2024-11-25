@@ -1,4 +1,5 @@
 import json
+ignored_keywords = ["unsigned"]
 
 def make_entry(f, name, description):
     print(f"{name}, {description}")
@@ -29,7 +30,13 @@ def automatic_entries():
             if line[0] == "â":
                 line_words = line.split(" ")
                 line_words.pop(0)
-                make_entry(output_f, line_words[1], ' '.join(line_words).strip("\n "))
+                name_index = 1
+                for word in line_words:
+                    if word in ignored_keywords:
+                        name_index += 1
+                    else:
+                        break
+                make_entry(output_f, line_words[name_index], ' '.join(line_words).strip("\n "))
 
 if __name__ == "__main__":
     automatic_entries()
