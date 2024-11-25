@@ -1,6 +1,6 @@
 const {ExtensionContext, commands, workspace, window, Uri} = require('vscode');
 const EXTENSION_ID = 'nxchighlighter';
-const COMPILER_PATH_SECTION = 'NXC.nbcCompilerPath';
+const COMPILER_PATH_SETTING = 'NXC.nbcCompilerPath';
 const TERM_NAME = "NBC Compiler";
 
 /**
@@ -8,46 +8,42 @@ const TERM_NAME = "NBC Compiler";
  */
 async function activate(context) {
 
-    console.log("Extension Running!");
-
-    let nbcPath = await getCompilerPath(COMPILER_PATH_SECTION);
+    let terminal = undefined;
+    let nbcPath = await getCompilerPath(COMPILER_PATH_SETTING);
 
     const openNxcSettings = commands.registerCommand(`${EXTENSION_ID}.openNxcSettings`, function () {
-        commands.executeCommand('workbench.action.openSettings', COMPILER_PATH_SECTION);
+        commands.executeCommand('workbench.action.openSettings', COMPILER_PATH_SETTING);
     });
 
+    //Detect change in settings for NBC compiler path
     const onCompilerPathChange = workspace.onDidChangeConfiguration(async e => {
-        if(e.affectsConfiguration(COMPILER_PATH_SECTION)){
-            nbcPath = await getCompilerPath(COMPILER_PATH_SECTION);
+        if(e.affectsConfiguration(COMPILER_PATH_SETTING)){
+            nbcPath = await getCompilerPath(COMPILER_PATH_SETTING);
         }
     });
 
-    const helloWorld = commands.registerCommand(`${EXTENSION_ID}.helloworld`, function () {
-        window.showInformationMessage('Hello World from nxchighlighter!');
-    });
-
-    const twoPlusTwo = commands.registerCommand(`${EXTENSION_ID}.twoPlusTwo`, function () {
-        window.showInformationMessage((2 + 2).toString());
-    });
-
+    //Run compiler on current NXC file with download flag -- downloads to any NXT connected by USB (might change in the future)
     const compileAndDownload = commands.registerCommand(`${EXTENSION_ID}.compileAndDownload`, function () {
-        const terminal = getNBCTerminal(TERM_NAME);
-        let currentFile = window.activeTextEditor.document.fileName;
-        sendTextIfValidNbc(terminal, `'${nbcPath.uri.fsPath}' -S=usb -d '${currentFile}'`, nbcPath.valid);
-        //terminal.sendText(`'${nbcPath.uri.fsPath}' -d '${currentFile}'`);
-        terminal.show();
+        terminal = getNBCTerminal(terminal);
+        let activeEditor = window.activeTextEditor;
+        if(activeEditor && activeEditor.document.languageId === 'nxc'){
+            sendTextIfValidNbc(terminal, `'${nbcPath.uri.fsPath}' -S=usb -d '${activeEditor.document.fileName}'`, nbcPath.valid);
+            terminal.show();
+        } else{
+            window.showErrorMessage("Editor must be open on a .nxc file")
+        }
     })
 
     const openTerminal = commands.registerCommand(`${EXTENSION_ID}.openTerminal`, function () {
-        const terminal = getNBCTerminal(TERM_NAME);
+        terminal = getNBCTerminal(terminal);
         terminal.sendText("echo 'Terminal Test Message'");
         terminal.show();
     });
     
+    //Run compiler with help flag to ensure it's working
     const testCompiler = commands.registerCommand(`${EXTENSION_ID}.testCompiler`, function () {
-        const terminal = getNBCTerminal(TERM_NAME);
+        terminal = getNBCTerminal(terminal);
         sendTextIfValidNbc(terminal, `'${nbcPath.uri.fsPath}' -help`, nbcPath.valid);
-        //terminal.sendText(`'${nbcPath.uri.fsPath}' -help`);
         terminal.show();
     });
 
@@ -70,19 +66,19 @@ function sendTextIfValidNbc(term, text, valid){
     }
 }
 
-function getNBCTerminal(terminalName) {
-    const terminals = window.terminals;
-    for(let i = 0; i < terminals.length; i++){
-        if(terminals[i].name === terminalName){
-            return terminals[i];
-        }
+//Check if extension terminal already exists
+function getNBCTerminal(terminal) {
+    if(!terminal){
+        return window.createTerminal(TERM_NAME);
+    } else {
+        return terminal
     }
-    return window.createTerminal(terminalName);
 }
 
+//Find and return compiler at path specified in settings
 async function getCompilerPath(section){
-    uri = Uri.file(workspace.getConfiguration().get(section));
-    const fileExists = await isFileReal(uri);
+    const uri = Uri.file(workspace.getConfiguration().get(section));
+    const fileExists = await isNbcPathReal(uri);
     if(fileExists){
         window.showInformationMessage('NBC compiler found!');
     } else {
@@ -94,18 +90,12 @@ async function getCompilerPath(section){
     }
 }
 
-async function isFileReal(uri){
+async function isNbcPathReal(uri){
     try {
         const fileStat = await workspace.fs.stat(uri);
-        console.log("test 1 passed");
-        if(fileStat.type !== 1){
+        if(fileStat.type !== 1 || !uri.fspath.endsWith("nbc.exe")){
             return false;
         }
-        console.log("test 2 passed");
-        if(!uri.fsPath.endsWith("nbc.exe")){
-            return false;
-        }
-        console.log("test 3 passed");
         return true;
     } catch {
         return false;
