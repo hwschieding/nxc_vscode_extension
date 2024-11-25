@@ -4,11 +4,11 @@ ignored_keywords = ["unsigned"]
 def make_entry(f, name, description):
     print(f"{name}, {description}")
     snippet = {
-        "prefix":f"{name}()",
-        "body":f"{name}($1)$0",
+        "prefix":f"{name}",
+        "body":f"{name}",
         "description":description
     }
-    snippet_json = f"\"{name}\":" + json.dumps(snippet, indent=4) + ",\n"
+    snippet_json = f"\"{name}\":" + json.dumps(snippet, indent=None) + ",\n"
     print(snippet_json)
     f.write(snippet_json)
 
