@@ -16,28 +16,13 @@
     "contributes": {
         "commands": [
             {
-                "command": "nxchighlighter.helloworld",
-                "title": "Hello World",
-                "category": "NXC"
-            },
-            {
-                "command": "nxchighlighter.twoPlusTwo",
-                "title": "Two Plus Two",
-                "category": "NXC"
-            },
-            {
-                "command": "nxchighlighter.openTerminal",
-                "title": "Open Terminal",
-                "category": "NXC"
-            },
-            {
                 "command": "nxchighlighter.testCompiler",
                 "title": "Test Compiler",
                 "category": "NXC"
             },
             {
                 "command": "nxchighlighter.compileAndDownload",
-                "title": "Compile And Download",
+                "title": "Compile And Download (USB)",
                 "category": "NXC",
                 "icon": "./images/download.png"
             }

@@ -32,14 +32,8 @@ async function activate(context) {
         } else{
             window.showErrorMessage("Editor must be open on a .nxc file")
         }
-    })
-
-    const openTerminal = commands.registerCommand(`${EXTENSION_ID}.openTerminal`, function () {
-        terminal = getNBCTerminal(terminal);
-        terminal.sendText("echo 'Terminal Test Message'");
-        terminal.show();
     });
-    
+
     //Run compiler with help flag to ensure it's working
     const testCompiler = commands.registerCommand(`${EXTENSION_ID}.testCompiler`, function () {
         terminal = getNBCTerminal(terminal);
@@ -48,10 +42,7 @@ async function activate(context) {
     });
 
     context.subscriptions.push(
-        onCompilerPathChange, 
-        helloWorld, 
-        twoPlusTwo, 
-        openTerminal, 
+        onCompilerPathChange,
         testCompiler,
         compileAndDownload,
         openNxcSettings
@@ -93,7 +84,7 @@ async function getCompilerPath(section){
 async function isNbcPathReal(uri){
     try {
         const fileStat = await workspace.fs.stat(uri);
-        if(fileStat.type !== 1 || !uri.fspath.endsWith("nbc.exe")){
+        if(fileStat.type !== 1 || !uri.fsPath.endsWith("nbc.exe")){
             return false;
         }
         return true;
